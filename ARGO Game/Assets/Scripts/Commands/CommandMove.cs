@@ -1,3 +1,8 @@
+/// <summary>
+/// Our Move command which will be shared with player and AI bots
+/// Worked on by: Jack Sinnott
+/// </summary>
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
