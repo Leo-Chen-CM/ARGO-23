@@ -1,10 +1,16 @@
 /// <summary>
 /// Our Command interface. 
-/// For anyone who is unsure of the interface keyword: https://www.w3schools.com/cs/cs_interface.php
+/// Reference used: https://pavcreations.com/command-design-pattern-for-flexible-controls-schemes/
 /// Worked on by: Jack Sinnott
 /// </summary>
 
-public interface ICommand
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class ICommand : ScriptableObject
 {
-    void Execute();
+    public virtual void Execute(InputAction t_action, GameObject t_go = null) { }
+
+    public virtual void FixedExecute(InputAction t_action, GameObject t_go = null) { }
+
 }

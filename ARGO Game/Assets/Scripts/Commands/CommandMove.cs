@@ -3,9 +3,8 @@
 /// Worked on by: Jack Sinnott
 /// </summary>
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CommandMove : ICommand
 {
@@ -18,8 +17,13 @@ public class CommandMove : ICommand
         _direction = t_dir;
     }
 
-    public void Execute()
+    public override void Execute(InputAction t_action, GameObject t_go = null)
     {
         _gameObject.transform.position += _direction;
+    }
+
+    public override void FixedExecute(InputAction t_action, GameObject t_go = null)
+    {
+
     }
 }
