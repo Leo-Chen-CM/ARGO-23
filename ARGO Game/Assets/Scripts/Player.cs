@@ -35,4 +35,16 @@ public class Player : NetworkBehaviour
 
     [ClientRpc]
     private void RpcMove() => m_rigidbody.velocity = m_movement;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Pickup")
+        {
+            Debug.Log("+1");
+        }
+        else if (other.tag == "Obstacle")
+        {
+            Debug.Log("hit");
+        }
+    }
 }
