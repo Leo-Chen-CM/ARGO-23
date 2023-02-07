@@ -4,13 +4,15 @@
 /// Worked on by: Jack Sinnott
 /// </summary>
 
-using UnityEngine;
-using UnityEngine.InputSystem;
-
-public class ICommand : ScriptableObject
+public abstract class ICommand
 {
-    public virtual void Execute(InputAction t_action, GameObject t_go = null) { }
+    protected readonly Unit Unit;
 
-    public virtual void FixedExecute(InputAction t_action, GameObject t_go = null) { }
+    protected ICommand(Unit unit)
+    {
+        Unit = unit;
+    }
 
+    public abstract void Execute();
+    public abstract void Undo();
 }

@@ -4,26 +4,23 @@
 /// </summary>
 
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CommandMove : ICommand
 {
-    GameObject _gameObject;
-    Vector3 _direction;
+    private Vector3 _direction;
 
-    public CommandMove(GameObject t_obj, Vector3 t_dir)
+    public CommandMove(Unit unit, Vector3 direction) : base(unit)
     {
-        _gameObject = t_obj;
-        _direction = t_dir;
+        _direction = direction;
     }
 
-    public override void Execute(InputAction t_action, GameObject t_go = null)
+    public override void Execute()
     {
-        _gameObject.transform.position += _direction;
+        Unit.Move(_direction);
     }
 
-    public override void FixedExecute(InputAction t_action, GameObject t_go = null)
+    public override void Undo()
     {
-
+        Unit.Move(_direction);
     }
 }
