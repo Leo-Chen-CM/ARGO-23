@@ -21,12 +21,12 @@ public class Unit : MonoBehaviour
     {
         _isActing = true;
 
-        var targetPosition = transform.position + t_dir;
+        Vector3 targetPosition = transform.position + t_dir;
 
         yield return new WaitForSeconds(0.4f);
         yield return new WaitUntil(() =>
         {
-            var currentPosition = transform.position;
+            Vector3 currentPosition = transform.position;
             currentPosition = Vector3.MoveTowards(currentPosition, targetPosition, Time.deltaTime * _moveSpeed);
             transform.position = currentPosition;
 
