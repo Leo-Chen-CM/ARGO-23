@@ -1,18 +1,16 @@
 /// <summary>
 /// Our Command interface. 
-/// Reference used: https://pavcreations.com/command-design-pattern-for-flexible-controls-schemes/
 /// Worked on by: Jack Sinnott
 /// </summary>
+/// 
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public abstract class ICommand
 {
-    protected readonly Unit Unit;
+    public abstract void Execute(Transform t_unitTrans, ICommand t_com); // Executes the actual command and allows us to save the command registered
 
-    protected ICommand(Unit unit)
-    {
-        Unit = unit;
-    }
+    public virtual void Move(Transform _unitTrans) { }
 
-    public abstract void Execute();
-    public abstract void Undo();
 }
