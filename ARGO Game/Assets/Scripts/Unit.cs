@@ -3,36 +3,49 @@
 /// Worked on by: Jack Sinnott
 /// </summary>
 
-using System.Collections;
 using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed;
-    private bool _isActing;
+    // For our ground raycast check
+    [SerializeField] private LayerMask _groundMask;
+    [SerializeField] private float _rayDistance = 5f;
+    Vector3 _direction = Vector3.down;
+    Ray _ray;
 
-    public void Move(Vector3 t_dir)
+    public Rigidbody _rb;
+
+    private void Start()
     {
-        if (_isActing) return;
-        StartCoroutine(MoveCoroutine(t_dir));
+        _rb = GetComponent<Rigidbody>();
     }
 
-    private IEnumerator MoveCoroutine(Vector3 t_dir)
+
+    private void Update()
     {
-        _isActing = true;
+        // Update our ray info so we are constantly drawing from player current position
+        _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
+        Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance));
 
-        Vector3 targetPosition = transform.position + t_dir;
+    }
 
-        yield return new WaitForSeconds(0.4f);
-        yield return new WaitUntil(() =>
+    /// <summary>
+    /// Draws a raycast from the bottom of the player downwards to check for ground collisions
+    /// </summary>
+    /// <returns>True if ground layerMask collides with ray, false otherwise</returns>
+    public bool IsGrounded()
+    {
+        if (Physics.Raycast(_ray, out RaycastHit _hit, _rayDistance, _groundMask))
         {
-            Vector3 currentPosition = transform.position;
-            currentPosition = Vector3.MoveTowards(currentPosition, targetPosition, Time.deltaTime * _moveSpeed);
-            transform.position = currentPosition;
-
-            return currentPosition == targetPosition;
-        });
-
-        _isActing = false;
+            Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance), Color.yellow);
+            Debug.Log("Did Hit");
+            return true;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance), Color.white);
+            Debug.Log("Did not Hit");
+            return false;
+        }
     }
 }
