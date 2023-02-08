@@ -13,6 +13,8 @@ public class Unit : MonoBehaviour
     Vector3 _direction = Vector3.down;
     Ray _ray;
 
+    public float _jumpForce = 5;
+
     public Rigidbody _rb;
 
     private void Start()
@@ -47,5 +49,10 @@ public class Unit : MonoBehaviour
             Debug.Log("Did not Hit");
             return false;
         }
+    }
+
+    public float GetJumpForce()
+    {
+        return _jumpForce;
     }
 }

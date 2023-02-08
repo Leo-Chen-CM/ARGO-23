@@ -13,7 +13,7 @@ public class InputHandler : MonoBehaviour
         //Bind keys to commands
         _bA = new CommandMoveLeft();
         _bD = new CommandMoveRight();
-        //_bS = new CommandSlide();
+        _bS = new CommandSlide();
         _bSpace = new CommandJump();
 
         _unit = GetComponent<Unit>();
@@ -35,10 +35,10 @@ public class InputHandler : MonoBehaviour
         {
             _bD.Execute(_unit, _bD);
         }
-        //if (Input.GetKeyDown(KeyCode.S))
-        //{
-        //    _bS.Execute();
-        //}
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _bS.Execute(_unit, _bS);
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _bSpace.Execute(_unit, _bSpace);
