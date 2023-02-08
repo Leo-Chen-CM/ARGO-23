@@ -16,6 +16,7 @@ public class CommandSlide : ICommand
         if (!_sliding)
         {
             _unit.transform.localScale = new Vector3(0.3f, .1f, 1);
+            
             _sliding = !_sliding;
         }
         else if (_sliding)
