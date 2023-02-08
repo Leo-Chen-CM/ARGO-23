@@ -17,6 +17,7 @@ public class CommandMoveLeft : ICommand
     public override void Move(Unit _unit)
     {
         _unit.transform.Translate(new Vector3(-3.5f,0.0f,0.0f));
+        //_unit._rb.velocity -= new Vector3(-3.5f, 0.0f, 0.0f);
     }
 }
 
