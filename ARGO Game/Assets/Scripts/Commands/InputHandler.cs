@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
-
-public class InputHandler : MonoBehaviour
+using Mirror;
+public class InputHandler : NetworkBehaviour
 {
     public Unit _unit;
     private ICommand _bA, _bD, _bS, _bSpace; // Our buttons A, D, S, Space so we can link the button to any command at runtime
@@ -20,28 +21,44 @@ public class InputHandler : MonoBehaviour
 
     }
 
+    [Client]
     private void Update()
     {
+        if (!isOwned) return;
         HandleInput();
     }
 
+
+    [Command]
     public void HandleInput()
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
-            _bA.Execute(_unit, _bA);
+            RpcMoveA();
         }
+
         if (Input.GetKeyDown(KeyCode.D))
         {
-            _bD.Execute(_unit, _bD);
+            RpcMoveD();
         }
+
         if (Input.GetKeyDown(KeyCode.S))
         {
-            _bS.Execute(_unit, _bS);
+            RpcMoveS();
         }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _bSpace.Execute(_unit, _bSpace);
+            RpcMoveSpace();
         }
     }
+
+    [ClientRpc]
+    private void RpcMoveA() => _bA.Execute(_unit, _bA);
+    [ClientRpc]
+    private void RpcMoveD() => _bD.Execute(_unit, _bD);
+    [ClientRpc]
+    private void RpcMoveS() => _bS.Execute(_unit, _bS);
+    [ClientRpc]
+    private void RpcMoveSpace() => _bSpace.Execute(_unit, _bSpace);
 }
