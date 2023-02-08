@@ -13,6 +13,7 @@ public class CommandJump : ICommand
         Move(t_unit);
 
         InputHandler._oldCommands.Add(t_com);
+
     }
 
     public override void Move(Unit _unit)
