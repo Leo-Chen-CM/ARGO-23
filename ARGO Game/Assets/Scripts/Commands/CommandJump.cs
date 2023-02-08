@@ -3,20 +3,24 @@
 /// Worked on by: Jack Sinnott
 /// </summary>
 
-//public class CommandJump : ICommand
-//{
-//    public CommandJump(Unit unit) : base(unit)
-//    {
-//    }
+using UnityEngine;
 
-//    public override void Execute()
-//    {
-        
-//    }
+public class CommandJump : ICommand
+{
+    private float _jumpForce = 2;
+    public override void Execute(Unit t_unit, ICommand t_com)
+    {
+        Move(t_unit);
 
-//    public override void Undo()
-//    {
-        
-//    }
-//}
+        InputHandler._oldCommands.Add(t_com);
+    }
 
+    public override void Move(Unit _unit)
+    {
+        if (_unit.IsGrounded())
+        {
+            //_unit.transform.Translate(new Vector3(0, 5f, 0.0f));
+            _unit._rb.velocity = Vector2.up * _jumpForce;
+        }
+    }
+}
