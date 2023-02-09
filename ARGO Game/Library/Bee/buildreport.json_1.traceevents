@@ -1,0 +1,549 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1675872861871682, "dur": 3829880, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1675872861871948, "dur": 3580, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1675872861875532, "dur": 48712, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1675872861924247, "dur": 655558, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1675872862579808, "dur": 3110850, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1675872865690662, "dur": 10898, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1675872865702241, "dur": 27, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1675872862387256, "dur": 177138, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1675872862388267, "dur": 40013, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1675872862547442, "dur": 5212, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1675872862552657, "dur": 11728, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1675872862553349, "dur": 10329, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1675872862568779, "dur": 1213, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1675872862567986, "dur": 2028, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1675872865702354, "dur": 266, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1675872862637662, "dur":1155, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872862638827, "dur":55, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1675872862638894, "dur":23, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1675872862638918, "dur":947, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1675872862639967, "dur":776, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872862640743, "dur":2, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672237, "dur":135, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672372, "dur":15, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672387, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672388, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672396, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672396, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672403, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672404, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672411, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672411, "dur":19, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672430, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672430, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672438, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672438, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672446, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672446, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672452, "dur":1, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672468, "dur":1, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865672545, "dur":2254, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1675872862640103, "dur":648, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872862640754, "dur":3554, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872862644321, "dur":0, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1675872862644343, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872862645578, "dur":375, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1675872862645956, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1675872862646001, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872862646202, "dur":8827, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1675872862655031, "dur":27270, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1675872862682305, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872862682316, "dur":1006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1675872862683358, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1675872862683472, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872862683882, "dur":2607, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1675872862686527, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1675872862686643, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872862686701, "dur":16520, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1675872862703256, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1675872862703366, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872862703377, "dur":1176682, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1675872863880099, "dur":147561, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864027692, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872864027705, "dur":3540, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864031284, "dur":42652, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864073941, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872864073975, "dur":2462, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864076475, "dur":21892, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864098372, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872864098383, "dur":1050, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864099466, "dur":54969, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864154441, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872864154452, "dur":45884, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864200373, "dur":26246, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864226624, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872864226636, "dur":2544, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864229218, "dur":20832, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864250077, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872864250088, "dur":569110, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864819256, "dur":65643, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864884905, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872864884917, "dur":22020, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864906974, "dur":81284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864988270, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872864988280, "dur":3388, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872864991700, "dur":22068, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865013773, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865013783, "dur":10904, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865024722, "dur":24035, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865048763, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865048795, "dur":30021, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865078955, "dur":71830, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865150791, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865150823, "dur":13843, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865164705, "dur":71114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865235824, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865235835, "dur":1021, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865236889, "dur":213293, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865450188, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865450200, "dur":46171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865496416, "dur":65376, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.Authenticators.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865561798, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865561810, "dur":26783, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.Authenticators.dll" }}
+,{ "pid":12345, "tid":1, "ts":1675872865588626, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/resources.assets" }}
+,{ "pid":12345, "tid":1, "ts":1675872865588659, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865588666, "dur":1257, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/resources.assets" }}
+,{ "pid":12345, "tid":1, "ts":1675872865590059, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/level0" }}
+,{ "pid":12345, "tid":1, "ts":1675872865590097, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865590104, "dur":1041, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/level0" }}
+,{ "pid":12345, "tid":1, "ts":1675872865591179, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":1, "ts":1675872865591214, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865591222, "dur":1048, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":1, "ts":1675872865592304, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1675872865592408, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1675872865592416, "dur":738, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1675872865593184, "dur":78998, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872862640141, "dur":618, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872862640759, "dur":3557, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872862644321, "dur":37978, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1675872862682305, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872862682327, "dur":1101, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1675872862683465, "dur":38069, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1675872862721539, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872862721552, "dur":1013, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1675872862722603, "dur":1036189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863758797, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872863758807, "dur":15733, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863774570, "dur":44037, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863818611, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872863818622, "dur":5220, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863823896, "dur":30494, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863854395, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872863854410, "dur":4212, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863858659, "dur":47627, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863906292, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872863906303, "dur":5233, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863911583, "dur":75635, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872863987225, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872863987236, "dur":35773, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864023047, "dur":124464, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864147516, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872864147528, "dur":47847, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864195413, "dur":56868, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864252287, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872864252298, "dur":548776, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864801133, "dur":27555, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864828691, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872864828698, "dur":30155, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864858888, "dur":122140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864981033, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872864981044, "dur":10325, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872864991418, "dur":64264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872865055688, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872865055698, "dur":60390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872865116122, "dur":130358, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872865246486, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872865246497, "dur":24411, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872865270943, "dur":142640, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872865413587, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872865413598, "dur":6684, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872865420318, "dur":250606, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872865670928, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1675872865670936, "dur":1184, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1675872865672158, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":2, "ts":1675872865672161, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872862640187, "dur":580, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872862640767, "dur":3547, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872862644320, "dur":183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1675872862644506, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872862646669, "dur":58876, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1675872862705579, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":3, "ts":1675872862705679, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872862705689, "dur":21831, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":3, "ts":1675872862727561, "dur":298662, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":3, "ts":1675872863026227, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872863026235, "dur":1731, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":3, "ts":1675872863027992, "dur":321244, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863349241, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872863350702, "dur":2379, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863353120, "dur":42944, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863396069, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872863396079, "dur":2558, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863398675, "dur":415067, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863813748, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872863813760, "dur":1148, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863814946, "dur":30203, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863845152, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872863845159, "dur":1315, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863846508, "dur":20816, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863867329, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872863867340, "dur":1019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863868393, "dur":46578, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863914977, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872863914987, "dur":9299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872863924328, "dur":94337, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864018671, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872864018682, "dur":10642, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864029360, "dur":79948, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864109313, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872864109322, "dur":85394, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864194751, "dur":53517, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864248272, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872864248280, "dur":547929, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864796255, "dur":37814, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864834074, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872864834084, "dur":43774, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864877896, "dur":103239, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872864981138, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872864981144, "dur":43240, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865024426, "dur":1111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865025542, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872865025553, "dur":12693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865038281, "dur":1692, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865039979, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872865039989, "dur":997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865041017, "dur":3133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865044156, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872865044167, "dur":958, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865045158, "dur":68322, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Telepathy.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865113485, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872865113496, "dur":76430, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Telepathy.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865189962, "dur":89708, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865279676, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872865279687, "dur":1016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865280737, "dur":178558, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865459299, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872865459309, "dur":993, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865460335, "dur":153355, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865613695, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1675872865613705, "dur":1431, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.dll" }}
+,{ "pid":12345, "tid":3, "ts":1675872865615174, "dur":57034, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872862640218, "dur":558, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872862640777, "dur":3558, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872862644336, "dur":59653, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1675872862704014, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872862704038, "dur":1519, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1675872862705603, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":4, "ts":1675872862705700, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872862705708, "dur":93230, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":4, "ts":1675872862798963, "dur":103907, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game.exe" }}
+,{ "pid":12345, "tid":4, "ts":1675872862902876, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872862902885, "dur":9131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game.exe" }}
+,{ "pid":12345, "tid":4, "ts":1675872862912053, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":4, "ts":1675872862912154, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872862912399, "dur":423157, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":4, "ts":1675872863335596, "dur":38913, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872863374515, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872863374526, "dur":985, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872863375543, "dur":21463, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872863397012, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872863397022, "dur":2037, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872863399093, "dur":481275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872863880372, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872863880383, "dur":4065, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872863884494, "dur":130126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864014624, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864014632, "dur":15681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864030350, "dur":63890, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864094246, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864094257, "dur":5411, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864099700, "dur":60954, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864160660, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864160672, "dur":40756, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864201473, "dur":26740, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864228218, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864228229, "dur":2641, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864230905, "dur":24182, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864255093, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864255104, "dur":542006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864797149, "dur":20617, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864817772, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864817783, "dur":982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864818798, "dur":27785, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864846589, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864846600, "dur":12247, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864858881, "dur":38755, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864897640, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864897649, "dur":11135, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864908822, "dur":75149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864983976, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872864983987, "dur":7915, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872864991932, "dur":55345, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865047283, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872865047294, "dur":32200, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865079528, "dur":112325, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865191859, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872865191870, "dur":23417, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865215322, "dur":124305, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865339633, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872865339644, "dur":1752, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865341434, "dur":104422, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865445859, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872865445867, "dur":13317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865459227, "dur":89453, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.Examples.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865548685, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872865548696, "dur":36117, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.Examples.dll" }}
+,{ "pid":12345, "tid":4, "ts":1675872865584844, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":4, "ts":1675872865584877, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872865584914, "dur":1062, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":4, "ts":1675872865586014, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1675872865586051, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872865586059, "dur":1341, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1675872865587431, "dur":6857, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1675872865594314, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1675872865594323, "dur":947, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1675872865595305, "dur":76885, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872862640245, "dur":540, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872862640785, "dur":3591, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872862644377, "dur":723, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1675872862645104, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872862646585, "dur":31212, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1675872862677832, "dur":21395, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1675872862699231, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872862699241, "dur":964, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1675872862700258, "dur":11691, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1675872862711955, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872862711966, "dur":3279, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1675872862715283, "dur":196253, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872862911542, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872862911864, "dur":1143, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872862913044, "dur":419918, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863332968, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872863333304, "dur":1096, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863334444, "dur":20808, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863355257, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872863355268, "dur":3370, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863358677, "dur":35153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863393835, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872863393846, "dur":1711, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863395595, "dur":441043, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863836644, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872863836657, "dur":2419, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863839120, "dur":69004, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863908130, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872863908183, "dur":1815, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863910034, "dur":49079, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863959118, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872863959129, "dur":2490, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872863961656, "dur":52686, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864014348, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872864014359, "dur":14960, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864029355, "dur":40908, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864070268, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872864070279, "dur":4148, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864074468, "dur":45070, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864119544, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872864119555, "dur":77767, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864197359, "dur":63806, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864261171, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872864261181, "dur":559272, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864820488, "dur":64954, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864885446, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872864885455, "dur":26917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864912409, "dur":63366, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864975779, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872864975789, "dur":15332, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872864991162, "dur":210536, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872865201703, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872865201713, "dur":15051, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872865216799, "dur":43503, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872865260308, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872865260319, "dur":1029, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872865261383, "dur":210129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872865471517, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872865471528, "dur":2103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872865473664, "dur":117655, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.Components.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872865591322, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1675872865591330, "dur":1166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.Components.dll" }}
+,{ "pid":12345, "tid":5, "ts":1675872865592527, "dur":79687, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872862640270, "dur":522, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872862640792, "dur":3522, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872862644321, "dur":71031, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":6, "ts":1675872862715355, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872862715641, "dur":1662, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":6, "ts":1675872862717339, "dur":812341, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872863529700, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872863529753, "dur":5001, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872863534784, "dur":280051, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872863814840, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872863814851, "dur":1043, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872863815929, "dur":28971, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872863844905, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872863844917, "dur":1146, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872863846099, "dur":68888, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872863914991, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872863914998, "dur":11708, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872863926745, "dur":76950, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864003700, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872864003724, "dur":35893, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864039659, "dur":70786, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864110473, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872864110484, "dur":84813, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864195332, "dur":52489, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864247827, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872864247838, "dur":548364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864796396, "dur":32168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864828569, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872864828581, "dur":13965, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864842581, "dur":19811, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864862397, "dur":10, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872864862417, "dur":980, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864863440, "dur":52602, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872864916047, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872864916061, "dur":101723, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865017822, "dur":56479, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865074306, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872865074317, "dur":21316, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865095670, "dur":173072, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865268747, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872865268758, "dur":1095, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865269886, "dur":43815, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865313707, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872865313787, "dur":16557, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865330381, "dur":76035, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/SimpleWebTransport.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865406426, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872865406444, "dur":4607, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/SimpleWebTransport.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865411087, "dur":34682, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865445843, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872865445854, "dur":856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865446744, "dur":87298, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.Transports.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865534048, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872865534058, "dur":35418, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Mirror.Transports.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865569514, "dur":46930, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865616450, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1675872865616463, "dur":1138, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":6, "ts":1675872865617634, "dur":54569, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872862640295, "dur":504, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872862640799, "dur":3571, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872862644373, "dur":2077, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1675872862646454, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872862646671, "dur":1261861, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1675872863908575, "dur":36976, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872863945681, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872863945714, "dur":13598, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872863959346, "dur":53066, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864012418, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872864012429, "dur":17703, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864030169, "dur":78508, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864108683, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872864108694, "dur":85808, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864194535, "dur":32084, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864226624, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872864226636, "dur":3939, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864230614, "dur":55284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864285904, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872864285916, "dur":510668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864796618, "dur":29247, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864825870, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872864825882, "dur":48493, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864874422, "dur":69207, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872864943635, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872864943646, "dur":80173, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865023858, "dur":5003, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865028866, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865028878, "dur":35845, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865064758, "dur":86413, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865151175, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865151183, "dur":56213, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865207444, "dur":31259, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865238710, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865238721, "dur":4613, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865243366, "dur":245274, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865488645, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865488656, "dur":9754, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865498489, "dur":1103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/MiddlewareTransport.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865499668, "dur":7, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865499685, "dur":927, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/MiddlewareTransport.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865500642, "dur":66739, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/kcp2k.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865567387, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865567398, "dur":17169, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/kcp2k.dll" }}
+,{ "pid":12345, "tid":7, "ts":1675872865584598, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":7, "ts":1675872865584732, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865585189, "dur":792, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":7, "ts":1675872865586017, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":7, "ts":1675872865586052, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865586059, "dur":973, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":7, "ts":1675872865587073, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":7, "ts":1675872865587192, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865587201, "dur":808, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":7, "ts":1675872865588043, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1675872865588075, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865588083, "dur":1824, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":7, "ts":1675872865589941, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/level0.resS" }}
+,{ "pid":12345, "tid":7, "ts":1675872865589975, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865589984, "dur":1314, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/level0.resS" }}
+,{ "pid":12345, "tid":7, "ts":1675872865591332, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":7, "ts":1675872865591367, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1675872865591374, "dur":1057, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":7, "ts":1675872865592468, "dur":79751, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872862640317, "dur":489, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872862640807, "dur":3527, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872862644335, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1675872862644489, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872862646404, "dur":28638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1675872862675079, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1675872862675222, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872862675278, "dur":2588, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1675872862677899, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1675872862678039, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872862678070, "dur":1314301, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1675872863992421, "dur":38558, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864030984, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872864030994, "dur":5100, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864036133, "dur":38997, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864075135, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872864075145, "dur":1236, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864076425, "dur":49932, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864126362, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872864126374, "dur":70656, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864197067, "dur":90668, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864287741, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872864287752, "dur":508838, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864796627, "dur":100602, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864897236, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872864897248, "dur":12264, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864909547, "dur":65301, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864974855, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872864974868, "dur":16424, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872864991336, "dur":20429, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865011770, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872865011781, "dur":5967, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865017783, "dur":21178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865038966, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872865038977, "dur":1300, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865040313, "dur":23827, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865064146, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872865064157, "dur":1070, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865065257, "dur":232981, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865298243, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872865298254, "dur":2859, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865301146, "dur":106579, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865407731, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872865407743, "dur":3353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865411132, "dur":1256, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/MultiplexTransport.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865412394, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872865412405, "dur":968, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/MultiplexTransport.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865413405, "dur":249133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865662542, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1675872865662550, "dur":4404, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/gameuser/Desktop/4th Year Work/ARGO/ARGO-23/Demo test/ARGO Game_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":8, "ts":1675872865666980, "dur":5246, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1675872865676753, "dur":2476, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1675872865702688, "dur": 1248, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1675872865702215, "dur": 1751, "ph": "X", "name": "Write chrome-trace events", "args": {} },
