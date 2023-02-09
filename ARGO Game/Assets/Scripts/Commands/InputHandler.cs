@@ -28,8 +28,6 @@ public class InputHandler : NetworkBehaviour
         HandleInput();
     }
 
-
-    //[Command]
     public void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.A))
