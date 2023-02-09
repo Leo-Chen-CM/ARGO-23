@@ -40,11 +40,13 @@ public class Player : NetworkBehaviour
     {
         if(other.tag == "Pickup")
         {
-            Debug.Log("+1");
+            FindObjectOfType<gameManager>().addScore();
+            Destroy(other.gameObject);
         }
         else if (other.tag == "Obstacle")
         {
             Debug.Log("hit");
+            Destroy(other.gameObject);
         }
     }
 }
