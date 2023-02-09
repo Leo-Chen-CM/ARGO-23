@@ -32,7 +32,15 @@ public class InputHandler : NetworkBehaviour
     [Command]
     public void HandleInput()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        // Validation code
+
+        Movement();
+    }
+
+    [ClientRpc]
+    private void Movement()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
         {
             RpcMoveA();
         }
@@ -53,12 +61,8 @@ public class InputHandler : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
     private void RpcMoveA() => _bA.Execute(_unit, _bA);
-    [ClientRpc]
     private void RpcMoveD() => _bD.Execute(_unit, _bD);
-    [ClientRpc]
     private void RpcMoveS() => _bS.Execute(_unit, _bS);
-    [ClientRpc]
     private void RpcMoveSpace() => _bSpace.Execute(_unit, _bSpace);
 }
