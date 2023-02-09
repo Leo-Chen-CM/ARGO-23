@@ -7,7 +7,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public abstract class ICommand
+public abstract class ICommand : MonoBehaviour
 {
     public abstract void Execute(Unit t_unit, ICommand t_com); // Executes the actual command and allows us to save the command registered
 
