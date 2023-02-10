@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     public Transform midSpawn;
     public Transform rightSpawn;
     private float waitTime;
+    private float speed;
 
     public GameObject obstacle;
     public GameObject pickup;
@@ -22,7 +23,8 @@ public class Spawner : MonoBehaviour
         positions[2] = rightSpawn.position;
         if(FindObjectOfType<gameManager>())
         {
-            waitTime = FindObjectOfType<gameManager>().getSpeed();
+            speed = FindObjectOfType<gameManager>().getSpeed();
+            waitTime = 1.0f / speed;
         }
 
         StartCoroutine(spawnObstacles());
@@ -39,7 +41,7 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             GameObject newObs = Instantiate(obstacle, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
-            newObs.GetComponent<objectMover>().speed = waitTime;
+            newObs.GetComponent<obstacleObject>().speed = speed;
             yield return new WaitForSeconds(waitTime);
         }
     }
@@ -53,7 +55,7 @@ public class Spawner : MonoBehaviour
         while(true)
         {
             GameObject newPickup = Instantiate(pickup, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
-            newPickup.GetComponent<objectMover>().speed = waitTime;
+            newPickup.GetComponent<CollectableObject>().speed = speed;
             yield return new WaitForSeconds(waitTime);
         }
     }
