@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
     public Transform leftSpawn;
     public Transform midSpawn;
     public Transform rightSpawn;
-    public float waitTime;
+    private float waitTime;
 
     public GameObject obstacle;
     public GameObject pickup;
@@ -20,6 +20,11 @@ public class Spawner : MonoBehaviour
         positions[0] = leftSpawn.position;
         positions[1] = midSpawn.position;
         positions[2] = rightSpawn.position;
+        if(FindObjectOfType<gameManager>())
+        {
+            waitTime = FindObjectOfType<gameManager>().getSpeed();
+        }
+
         StartCoroutine(spawnObstacles());
     }
 

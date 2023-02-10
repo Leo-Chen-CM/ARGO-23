@@ -7,6 +7,8 @@ public class objectMover : MonoBehaviour
 {
     public float speed;
 
+
+
     private void FixedUpdate()
     {
         Vector3 pos = transform.position;

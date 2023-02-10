@@ -8,6 +8,8 @@ public class gameManager : MonoBehaviour
     private int score = 0;
     public TMP_Text scoreText;
 
+    public float speed;
+
     private void Start()
     {
         scoreText.SetText("score: " + score.ToString());
@@ -17,5 +19,10 @@ public class gameManager : MonoBehaviour
     {
         score++;
         scoreText.SetText("score: " + score.ToString());
+    }
+
+    public float getSpeed()
+    {
+        return speed;
     }
 }
