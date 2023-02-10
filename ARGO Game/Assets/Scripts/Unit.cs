@@ -40,13 +40,11 @@ public class Unit : MonoBehaviour
         if (Physics.Raycast(_ray, out RaycastHit _hit, _rayDistance, _groundMask))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance), Color.yellow);
-            Debug.Log("Did Hit");
             return true;
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance), Color.white);
-            Debug.Log("Did not Hit");
             return false;
         }
     }
