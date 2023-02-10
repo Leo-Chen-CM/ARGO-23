@@ -24,7 +24,7 @@ public class obstacleObject : Obstacle
     }
     public override void Interaction()
     {
-       
+        Debug.Log("interacted with obstacle");
     }
 
 }
