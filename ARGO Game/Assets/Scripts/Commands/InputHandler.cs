@@ -10,7 +10,7 @@ public class InputHandler : NetworkBehaviour
 
     // For mobile
     private Vector2 _startPos; // Start position of the screen swipe
-    private int _pixelDistToDetect = 20;
+    private int _pixelDistToDetect = 30;
     private bool _fingerDown;
 
     private void Awake()
@@ -40,31 +40,27 @@ public class InputHandler : NetworkBehaviour
             _fingerDown = true;
         }
 
-        if (/*Input.GetKeyDown(KeyCode.A) ||*/ _fingerDown && Input.touches[0].position.x <= _startPos.x - _pixelDistToDetect)
+        if (_fingerDown && Input.touches[0].position.x <= _startPos.x - _pixelDistToDetect)
         {
             _fingerDown = false;
-            Debug.Log("swipe Left");
             _bA.Execute(_unit, _bA);
         }
 
-        if (/*Input.GetKeyDown(KeyCode.D) ||*/ _fingerDown && Input.touches[0].position.x >= _startPos.x + _pixelDistToDetect)
+        if (_fingerDown && Input.touches[0].position.x >= _startPos.x + _pixelDistToDetect)
         {
             _fingerDown = false;
-            Debug.Log("swipe Right");
             _bD.Execute(_unit, _bD);
         }
 
-        if (/*Input.GetKeyDown(KeyCode.S) ||*/ _fingerDown && Input.touches[0].position.y <= _startPos.y - _pixelDistToDetect)
+        if (_fingerDown && Input.touches[0].position.y <= _startPos.y - _pixelDistToDetect)
         {
             _fingerDown = false;
-            Debug.Log("swipe down");
             _bS.Execute(_unit, _bS);
         }
 
-        if (/*Input.GetKeyDown(KeyCode.Space) ||*/ _fingerDown && Input.touches[0].position.y >= _startPos.y + _pixelDistToDetect)
+        if (_fingerDown && Input.touches[0].position.y >= _startPos.y + _pixelDistToDetect)
         {
             _fingerDown = false;
-            Debug.Log("swipe up");
             _bSpace.Execute(_unit, _bSpace);
         }
 
@@ -81,28 +77,24 @@ public class InputHandler : NetworkBehaviour
             if(Input.mousePosition.y >= _startPos.y + _pixelDistToDetect)
             {
                 _fingerDown = false;
-                Debug.Log("Swipe up");
                 _bSpace.Execute(_unit, _bSpace);
             }
 
             else if (Input.mousePosition.y <= _startPos.y - _pixelDistToDetect)
             {
                 _fingerDown = false;
-                Debug.Log("Swipe down");
                 _bS.Execute(_unit, _bSpace);
             }
 
             else if (Input.mousePosition.x >= _startPos.x + _pixelDistToDetect)
             {
                 _fingerDown = false;
-                Debug.Log("Swipe Right");
                 _bD.Execute(_unit, _bSpace);
             }
 
             else if (Input.mousePosition.x <= _startPos.x - _pixelDistToDetect)
             {
                 _fingerDown = false;
-                Debug.Log("Swipe Left");
                 _bA.Execute(_unit, _bSpace);
             }
         }
