@@ -41,18 +41,14 @@ public class BotHandler : MonoBehaviour
         if (Physics.Raycast(_ray, out RaycastHit _hit, _rayDistance, _obstacleMask) && t_temp == 0)
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance), Color.yellow);
-            Debug.Log("Did Hit");
             _moveLeft.Execute(_unit, _moveLeft);
         }
 
         if (Physics.Raycast(_ray, out RaycastHit _hit2, _rayDistance, _obstacleMask) && t_temp == 1)
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance), Color.yellow);
-            Debug.Log("Did Hit");
             _moveRight.Execute(_unit, _moveRight);
         }
-
-        Debug.Log("Random value is:" + _temp + "\nOur current passed value is: " + t_temp);
 
 
         // _slide.Execute(_unit, _slide);
