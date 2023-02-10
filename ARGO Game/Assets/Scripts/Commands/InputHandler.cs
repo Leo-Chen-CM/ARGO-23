@@ -88,7 +88,7 @@ public class InputHandler : NetworkBehaviour
 
             else if (Input.mousePosition.x >= _startPos.x + _pixelDistToDetect)
             {
-                _fingerDown = false;)
+                _fingerDown = false;
                 _bD.Execute(_unit, _bSpace);
             }
 
