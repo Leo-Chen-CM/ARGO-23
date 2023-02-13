@@ -7,6 +7,10 @@ public class Spawner : MonoBehaviour
     public Transform leftSpawn;
     public Transform midSpawn;
     public Transform rightSpawn;
+
+    public Transform upleftSpawn;
+    public Transform upmidSpawn;
+    public Transform uprightSpawn;
     private float waitTime;
     private float speed;
 
@@ -17,11 +21,14 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        positions = new Vector3[3];
+        positions = new Vector3[6];
         positions[0] = leftSpawn.position;
         positions[1] = midSpawn.position;
         positions[2] = rightSpawn.position;
-        if(FindObjectOfType<gameManager>())
+        positions[3] = upleftSpawn.position;
+        positions[4] = upmidSpawn.position;
+        positions[5] = uprightSpawn.position;
+        if (FindObjectOfType<gameManager>())
         {
             speed = FindObjectOfType<gameManager>().getSpeed();
             waitTime = 1.0f / speed;
@@ -54,7 +61,7 @@ public class Spawner : MonoBehaviour
         offset.z = 0;
         while(true)
         {
-            GameObject newPickup = Instantiate(pickup, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
+            GameObject newPickup = Instantiate(pickup, positions[Random.Range(4, 6)] + offset, Quaternion.identity);
             newPickup.GetComponent<CollectableObject>().speed = speed;
             yield return new WaitForSeconds(waitTime);
         }
