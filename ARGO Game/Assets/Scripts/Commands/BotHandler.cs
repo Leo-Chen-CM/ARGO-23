@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class BotHandler : MonoBehaviour
 {
+    public enum Difficulty
+    {
+        EASY = 0,
+        MODERATE = 1,
+        HARD = 2
+    }
+
+    FuzzyTest _ft;
+
+    public float _test;
+
+    Difficulty _diff;
     public Unit _unit;
     private ICommand _moveLeft, _moveRight, _jump, _slide; // Our buttons A, D, S, Space so we can link the button to any command at runtime
     public static List<ICommand> _oldCommands = new List<ICommand>(); // If we store commands in a list we can backtrack through commands
-    // For our ground raycast check
+    
+        // For our ground raycast check
     [SerializeField] private LayerMask _obstacleMask;
-    [SerializeField] private float _rayDistance = 5f;
+    [SerializeField] private float _rayDistance = 2.5f;
     Vector3 _direction = Vector3.forward;
     Ray _ray;
 
-    int _temp;
-    private void Start()
+    private void Awake()
     {
         //Bind keys to commands
         _moveLeft = new CommandMoveLeft();
@@ -24,29 +36,45 @@ public class BotHandler : MonoBehaviour
 
         _unit = GetComponent<Unit>();
 
+        _diff = Difficulty.HARD;
+
+        _ft = GetComponent<FuzzyTest>();
     }
 
     private void Update()
     {
-        // Update our ray info so we are constantly drawing from player current position
+        switch (_diff)
+        {
+            case Difficulty.EASY:
+                _rayDistance = 2.5f;
+                break;
+            case Difficulty.MODERATE:
+                _rayDistance = 5f;
+                break;
+            case Difficulty.HARD:
+                _rayDistance = 7.5f;
+                break;
+            default:
+                break;
+        }
+
         _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
         Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance));
-        GenerateRandomNumber(); 
-        HandleInput(_temp);
+
+        CollisionHandler(_rayDistance);
+
     }
 
-    public void HandleInput(int t_temp)
+    public void HandleInput(float t_temp)
     {
-        
-        if (Physics.Raycast(_ray, out RaycastHit _hit, _rayDistance, _obstacleMask) && t_temp == 0)
+
+        if (t_temp <= .3)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance), Color.yellow);
             _moveLeft.Execute(_unit, _moveLeft);
         }
 
-        if (Physics.Raycast(_ray, out RaycastHit _hit2, _rayDistance, _obstacleMask) && t_temp == 1)
+        if (t_temp >= .7)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance), Color.yellow);
             _moveRight.Execute(_unit, _moveRight);
         }
 
@@ -58,8 +86,12 @@ public class BotHandler : MonoBehaviour
 
     }
 
-    void GenerateRandomNumber()
+    public void CollisionHandler(float t_rayDist)
     {
-        _temp = Random.Range(0, 2);
+        if (Physics.Raycast(_ray, out RaycastHit _hit, t_rayDist, _obstacleMask))
+        {
+            _ft.Fuzzification(_test);
+        }
     }
+
 }
