@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class InputHandler : NetworkBehaviour
+public class InputHandlerTestCode : MonoBehaviour
 {
     public Unit _unit;
     private ICommand _bA, _bD, _bS, _bSpace; // Our buttons A, D, S, Space so we can link the button to any command at runtime
@@ -12,7 +11,6 @@ public class InputHandler : NetworkBehaviour
     private Vector2 _startPos; // Start position of the screen swipe
     private int _pixelDistToDetect = 30;
     private bool _fingerDown;
-    public bool _offline;
 
 
     private void Awake()
@@ -26,15 +24,9 @@ public class InputHandler : NetworkBehaviour
         _unit = GetComponent<Unit>();
 
     }
-    public override void OnStartServer()
-    {
-        FindObjectOfType<gameManager>().Reset();
-    }
 
-        [Client]
     private void Update()
     {
-        if (!isOwned || !_offline) return;
         HandleInput();
     }
 
