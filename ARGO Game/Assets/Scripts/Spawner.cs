@@ -14,15 +14,16 @@ public class Spawner : NetworkBehaviour
     public Transform uprightSpawn;
     private float waitTime;
     private float speed;
+    public int SpiderCount = 0;
+    public int ShieldCount = 0;
 
 
-    public GameObject obstacle;
-    public GameObject spider;
-    public GameObject pickup;
 
     [SerializeField] public GameObject obstacle;
     [SerializeField] public GameObject pickup;
->
+    [SerializeField] public GameObject Spider;
+    [SerializeField] public GameObject Shield;
+
 
     private Vector3[] positions;
 
@@ -51,7 +52,8 @@ public class Spawner : NetworkBehaviour
         offset.y /= 2;
         offset.z = 0;
         StartCoroutine(spawnPickups());
-        StartCoroutine(spawnSpider());
+        //StartCoroutine(spawnSpider());
+        StartCoroutine(spawnShield());
         yield return new WaitForSeconds(waitTime / 2.0f);
         while (true)
         {
@@ -87,11 +89,34 @@ public class Spawner : NetworkBehaviour
         offset.x = 0;
         offset.y /= 2;
         offset.z = 0;
-        while (true)
+
+        while (SpiderCount<1)
         {
-            GameObject newPickup = Instantiate(spider, positions[1] + offset, Quaternion.identity);
-            newPickup.GetComponent<CollectableObject>().speed = speed;
+            
+            GameObject NewSpider = Instantiate(Spider, positions[1] + offset, Quaternion.identity);
+            NetworkServer.Spawn(NewSpider);
             yield return new WaitForSeconds(waitTime);
+            SpiderCount = 1;
+            Debug.Log("spider count " + SpiderCount);
         }
     }
+
+    private IEnumerator spawnShield()
+    {
+        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
+        offset.x = 0;
+        offset.y /= 2;
+        offset.z = 0;
+
+        while (ShieldCount < 1)
+        {
+
+            GameObject NewShield = Instantiate(Shield, positions[1] + offset, Quaternion.identity);
+            NetworkServer.Spawn(NewShield);
+            yield return new WaitForSeconds(waitTime);
+            ShieldCount = 1;
+            Debug.Log("ShieldCount " + ShieldCount);
+        }
+    }
+
 }
