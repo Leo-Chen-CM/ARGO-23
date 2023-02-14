@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422d133250408bf41a401f16a455c28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   ShieldField: {fileID: 4569176629462503428, guid: a3067b36d7fedda48a45c72a4689476f,
     type: 3}
   spawner: {fileID: 2379754799514549240, guid: 71d8e1bf4a7c7bd468a0770dec2beff4, type: 3}
