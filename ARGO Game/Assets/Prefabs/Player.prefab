@@ -153,6 +153,15 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   _unit: {fileID: 8227058193721012617}
+  _controls:
+    m_Name: Controls
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9481e1e1-dc14-4ce9-96f4-0af2b1e0248c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!114 &8227058193721012617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +237,6 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Touch
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
