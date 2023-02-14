@@ -795,11 +795,14 @@ MonoBehaviour:
   uprightSpawn: {fileID: 5412823687843985322}
   SpiderCount: 0
   ShieldCount: 0
+  LavaPickupCount: 0
   obstacle: {fileID: 5585500744148425663, guid: 4351b1511fd6ec947abfb6ae7a1b8ab7,
     type: 3}
   pickup: {fileID: 4656334982861650121, guid: 16b4f74adfcbe274db527b96f49f9521, type: 3}
   Spider: {fileID: 5520275771620367813, guid: 63eb7c5faf7a24c4ea15acc7c0d0b485, type: 3}
   Shield: {fileID: 4510862483603238532, guid: 522b165f628ee7546971c2190044b89c, type: 3}
+  LavaPickup: {fileID: 2518558820168100405, guid: 7a0c5b09d0c383848b9893dd45cab98a,
+    type: 3}
 --- !u!4 &2379754799185011098
 Transform:
   m_ObjectHideFlags: 0
