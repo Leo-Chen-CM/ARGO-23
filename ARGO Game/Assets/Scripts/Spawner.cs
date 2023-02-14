@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     private float speed;
 
     public GameObject obstacle;
+    public GameObject spider;
     public GameObject pickup;
 
     private Vector3[] positions;
@@ -37,6 +38,7 @@ public class Spawner : MonoBehaviour
         offset.y /= 2;
         offset.z = 0;
         StartCoroutine(spawnPickups());
+        StartCoroutine(spawnSpider());
         yield return new WaitForSeconds(waitTime / 2.0f);
         while (true)
         {
@@ -55,6 +57,22 @@ public class Spawner : MonoBehaviour
         while(true)
         {
             GameObject newPickup = Instantiate(pickup, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
+            newPickup.GetComponent<CollectableObject>().speed = speed;
+            yield return new WaitForSeconds(waitTime);
+        }
+    }
+
+
+
+    private IEnumerator spawnSpider()
+    {
+        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
+        offset.x = 0;
+        offset.y /= 2;
+        offset.z = 0;
+        while (true)
+        {
+            GameObject newPickup = Instantiate(spider, positions[1] + offset, Quaternion.identity);
             newPickup.GetComponent<CollectableObject>().speed = speed;
             yield return new WaitForSeconds(waitTime);
         }
