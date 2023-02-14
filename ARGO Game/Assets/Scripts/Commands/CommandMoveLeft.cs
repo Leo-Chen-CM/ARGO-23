@@ -8,14 +8,14 @@ using UnityEngine;
 public class CommandMoveLeft : ICommand
 {
     private float _leftBound = -3.5f;
-    public override void Execute(Unit t_unit, ICommand t_com)
+    public void Execute(Unit t_unit, ICommand t_com)
     {
         Move(t_unit);
 
         InputHandler._oldCommands.Add(t_com);
     }
 
-    public override void Move(Unit _unit)
+    public void Move(Unit _unit)
     {
         if(_unit.transform.position.x > _leftBound)
             _unit.transform.Translate(new Vector3(-3.5f,0.0f,0.0f));

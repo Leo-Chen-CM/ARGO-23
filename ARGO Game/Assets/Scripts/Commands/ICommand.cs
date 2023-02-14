@@ -6,7 +6,7 @@
 using UnityEngine;
 
 
-public abstract class ICommand 
+public interface ICommand 
 {
     public abstract void Execute(Unit t_unit, ICommand t_com); // Executes the actual command and allows us to save the command registered
 
