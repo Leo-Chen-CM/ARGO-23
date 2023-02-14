@@ -52,7 +52,7 @@ public class Spawner : NetworkBehaviour
         offset.y /= 2;
         offset.z = 0;
         StartCoroutine(spawnPickups());
-        //StartCoroutine(spawnSpider());
+        StartCoroutine(spawnSpider());
         StartCoroutine(spawnShield());
         yield return new WaitForSeconds(waitTime / 2.0f);
         while (true)
@@ -93,7 +93,7 @@ public class Spawner : NetworkBehaviour
         while (SpiderCount<1)
         {
             
-            GameObject NewSpider = Instantiate(Spider, positions[1] + offset, Quaternion.identity);
+            GameObject NewSpider = Instantiate(Spider, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
             NetworkServer.Spawn(NewSpider);
             yield return new WaitForSeconds(waitTime);
             SpiderCount = 1;
@@ -111,7 +111,7 @@ public class Spawner : NetworkBehaviour
         while (ShieldCount < 1)
         {
 
-            GameObject NewShield = Instantiate(Shield, positions[1] + offset, Quaternion.identity);
+            GameObject NewShield = Instantiate(Shield, positions[Random.Range(0, 6)] + offset, Quaternion.identity);
             NetworkServer.Spawn(NewShield);
             yield return new WaitForSeconds(waitTime);
             ShieldCount = 1;
