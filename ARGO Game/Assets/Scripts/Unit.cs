@@ -17,13 +17,15 @@ public class Unit : MonoBehaviour
 
     public Rigidbody _rb;
 
+    private gameManager gm;
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        gm = FindObjectOfType<gameManager>();
     }
 
-
-    private void Update()
+        private void Update()
     {
         // Update our ray info so we are constantly drawing from player current position
         _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
@@ -54,15 +56,20 @@ public class Unit : MonoBehaviour
         return _jumpForce;
     }
 
+    // currently triggers for all players not just user - action required
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Pickup")
         {
-            FindObjectOfType<gameManager>().addScore();
+            gm.addScore();
             Destroy(other.gameObject);
         }
         else if (other.tag == "Obstacle")
         {
+            if (!gm.reduceHealth())
+            {
+                Debug.Log("player died");
+            }
             Destroy(other.gameObject);
         }
     }
