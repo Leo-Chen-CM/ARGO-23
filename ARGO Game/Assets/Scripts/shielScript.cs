@@ -2,25 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiderScript : Obstacle
+public class shielScript : Obstacle
 {
-
     public float speed;
-    public GameObject SpidersWeb;
+    public GameObject ShieldField;
     public GameObject spawner;
-    Vector3 webPosition;
-  
-   public  int waittime = 4;
-  
-    private void Start()
-    {
-        webPosition = new Vector3(0f, 0.797f, -5.878f);
-      
-      
-    }
+    public Transform PLayerTransform;
+    float activeTime = 5.0f;
+   
+
     private void FixedUpdate()
     {
         Movement();
+        
     }
 
     public override void Movement()
@@ -32,24 +26,24 @@ public class SpiderScript : Obstacle
             Destroy(gameObject);
         }
         transform.position = pos;
+       
     }
     public override void Interaction()
     {
-        // spawn web
+
     }
-  
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-           
-           
-            GameObject newWeb = Instantiate(SpidersWeb, webPosition, Quaternion.identity);
-            Destroy(newWeb,waittime);
-            int check= spawner.gameObject.GetComponent<Spawner>().SpiderCount = 0;
-            Debug.Log(check);
+            Vector3 offset = new Vector3( 0.0f,0.55f,0.0f);
+
+            GameObject newWeb = Instantiate(ShieldField, PLayerTransform.position- offset, Quaternion.identity);
+            Destroy(newWeb, activeTime);
+            spawner.gameObject.GetComponent<Spawner>().SpiderCount = 0;
+          
+
+
         }
     }
-
-   
 }

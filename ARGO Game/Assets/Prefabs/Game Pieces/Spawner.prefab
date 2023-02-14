@@ -94,6 +94,7 @@ MonoBehaviour:
   obstacle: {fileID: 5585500744148425663, guid: 4351b1511fd6ec947abfb6ae7a1b8ab7,
     type: 3}
   pickup: {fileID: 4656334982861650121, guid: 16b4f74adfcbe274db527b96f49f9521, type: 3}
+  Spider: {fileID: 5520275771620367813, guid: 63eb7c5faf7a24c4ea15acc7c0d0b485, type: 3}
 --- !u!114 &7111078314507492016
 MonoBehaviour:
   m_ObjectHideFlags: 0
