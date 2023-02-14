@@ -1,8 +1,9 @@
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class Spawner : NetworkBehaviour
 {
     public Transform leftSpawn;
     public Transform midSpawn;
@@ -14,12 +15,12 @@ public class Spawner : MonoBehaviour
     private float waitTime;
     private float speed;
 
-    public GameObject obstacle;
-    public GameObject pickup;
+    [SerializeField] public GameObject obstacle;
+    [SerializeField] public GameObject pickup;
 
     private Vector3[] positions;
 
-    private void Start()
+    public override void OnStartServer()
     {
         positions = new Vector3[6];
         positions[0] = leftSpawn.position;
@@ -49,6 +50,8 @@ public class Spawner : MonoBehaviour
         {
             GameObject newObs = Instantiate(obstacle, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
             newObs.GetComponent<obstacleObject>().speed = speed;
+            newObs.gameObject.transform.SetParent(this.transform);
+            NetworkServer.Spawn(newObs);
             yield return new WaitForSeconds(waitTime);
         }
     }
@@ -63,6 +66,8 @@ public class Spawner : MonoBehaviour
         {
             GameObject newPickup = Instantiate(pickup, positions[Random.Range(4, 6)] + offset, Quaternion.identity);
             newPickup.GetComponent<CollectableObject>().speed = speed;
+            newPickup.gameObject.transform.SetParent(this.transform);
+            NetworkServer.Spawn(newPickup);
             yield return new WaitForSeconds(waitTime);
         }
     }
