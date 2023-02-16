@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FuzzyTest : MonoBehaviour
 {
-
     // priorities
     float m_left;
     float m_stay;
@@ -14,19 +13,13 @@ public class FuzzyTest : MonoBehaviour
     public AnimationCurve m_dontMove;
     public AnimationCurve m_moveRight;
 
-    // external dependicies
-    public FuzzyTriangle m_fuzz;
-    public FuzzyOperators m_operators;
+    BotHandler _aiUnit;
 
-    public BotHandler _unit;
-
+    bool _moveLeft = false, _moveRight = false;
 
     private void Awake()
     {
-        // external dependencies
-        m_fuzz = GetComponent<FuzzyTriangle>();
-        m_operators = GetComponent<FuzzyOperators>();
-        _unit = GetComponent<BotHandler>();
+        _aiUnit = GetComponent<BotHandler>();
     }
 
 
@@ -37,6 +30,21 @@ public class FuzzyTest : MonoBehaviour
         m_stay = m_dontMove.Evaluate(t_inputValue);
 
         m_right = m_moveRight.Evaluate(t_inputValue);
+
+        if(m_left > m_stay && m_left > m_right)
+        {
+            _moveLeft = true;
+        }
+        else if(m_right > m_left && m_right > m_stay)
+        {
+            _moveRight = true;
+        }
+
+
+        _aiUnit.HandleInput(_moveLeft, _moveRight);
+
+        _moveLeft = false;
+        _moveRight = false;
 
         Debug.Log("m_left: " + m_left + "\n m_stay: " + m_stay + "\nm_right: " + m_right);
     }
