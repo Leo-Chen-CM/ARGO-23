@@ -124,6 +124,7 @@ MonoBehaviour:
   SpidersWeb: {fileID: 4499576185422717560, guid: 9273908297a5e8a4da5e5394cc32025c,
     type: 3}
   spawner: {fileID: 2379754799514549240, guid: 71d8e1bf4a7c7bd468a0770dec2beff4, type: 3}
+  gm: {fileID: 7804843690267304042, guid: a45936f2bc3dfc94fbbac1c1046ca11c, type: 3}
   waittime: 4
 --- !u!65 &5520275771620367809
 BoxCollider:

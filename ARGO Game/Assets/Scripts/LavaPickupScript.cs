@@ -6,7 +6,18 @@ public class LavaPickupScript : Obstacle
 {
     public float speed;
     public GameObject spawner;
-    float LavaLiveTime=5.0f;
+    public GameObject lavaFloor;
+    float LavaLiveTime=25.0f;
+    public GameObject gm;
+    Vector3 floorVec;
+   
+    
+    private void Start()
+    {
+        floorVec = transform.position;
+        floorVec.y = floorVec.y - 1.2f;
+        floorVec.z = floorVec.z - 38;
+    }
 
     private void FixedUpdate()
     {
@@ -33,9 +44,9 @@ public class LavaPickupScript : Obstacle
         if (other.gameObject.CompareTag("Player"))
         {
 
-
-            //GameObject newLavaFloor = Instantiate(SpidersWeb, transform.position, Quaternion.identity);
-            //Destroy(newLavaFloor, LavaLiveTime);
+            gm.gameObject.GetComponent<gameManager>().reduceHealth();
+            GameObject newLavaFloor = Instantiate(lavaFloor, floorVec, Quaternion.identity);
+            Destroy(newLavaFloor, LavaLiveTime);
             //int check = spawner.gameObject.GetComponent<Spawner>().SpiderCount = 0;
             //Debug.Log(check);
         }

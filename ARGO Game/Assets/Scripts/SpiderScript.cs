@@ -8,6 +8,7 @@ public class SpiderScript : Obstacle
     public float speed;
     public GameObject SpidersWeb;
     public GameObject spawner;
+    public GameObject gm;  
     Vector3 webPosition;
   
    public  int waittime = 4;
@@ -46,6 +47,7 @@ public class SpiderScript : Obstacle
            
             GameObject newWeb = Instantiate(SpidersWeb, webPosition, Quaternion.identity);
             Destroy(newWeb,waittime);
+            gm.gameObject.GetComponent<gameManager>().reduceHealth();
             int check= spawner.gameObject.GetComponent<Spawner>().SpiderCount = 0;
             Debug.Log(check);
         }

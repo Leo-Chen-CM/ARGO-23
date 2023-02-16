@@ -16,7 +16,7 @@ public class Spawner : NetworkBehaviour
     private float speed;
     public int SpiderCount = 0;
     public int ShieldCount = 0;
-    public int LavaPickupCount = 0;
+    public int LavaCount = 0;
 
 
 
@@ -53,10 +53,11 @@ public class Spawner : NetworkBehaviour
         offset.x = 0;
         offset.y /= 2;
         offset.z = 0;
-       // StartCoroutine(spawnPickups());
-      //  StartCoroutine(spawnSpider());
-      //  StartCoroutine(spawnShield());
-      //  StartCoroutine(spawnLavaPickup());
+        StartCoroutine(spawnPickups());
+        StartCoroutine(spawnLavaPickup());
+        StartCoroutine(spawnSpider());
+        StartCoroutine(spawnShield());
+      
         yield return new WaitForSeconds(waitTime / 2.0f);
         while (true)
         {
@@ -130,14 +131,14 @@ public class Spawner : NetworkBehaviour
         offset.y /= 2;
         offset.z = 0;
 
-        while (ShieldCount < 1)
+        while (LavaCount < 1)
         {
 
             GameObject NewLavaPickup = Instantiate(LavaPickup, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
             NetworkServer.Spawn(NewLavaPickup);
             yield return new WaitForSeconds(waitTime);
-            Debug.Log("NewLavaPickup: " +LavaPickupCount);
-            ShieldCount = 1;
+            Debug.Log("NewLavaPickup: " + LavaCount);
+            LavaCount = 1;
 
         }
     }
