@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6184684288447832465}
   - component: {fileID: 970493306483638021}
   - component: {fileID: 3753488534193086600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shieldIcon
-  m_TagString: Obstacle
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
