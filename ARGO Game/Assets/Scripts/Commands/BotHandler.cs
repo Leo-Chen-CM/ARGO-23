@@ -24,7 +24,7 @@ public class BotHandler : MonoBehaviour
     public float _test;
 
     Difficulty _diff;
-    Lane _currentLane;
+    public Lane _currentLane;
 
     bool _calculated = false;
 
@@ -74,6 +74,12 @@ public class BotHandler : MonoBehaviour
             default:
                 break;
         }
+
+        if (transform.position.x < -1f) _currentLane = Lane.LEFT_LANE;
+        else if (transform.position.x > -1f && transform.position.x < 1f) _currentLane = Lane.MIDDLE_LANE;
+        else if (transform.position.x > 1f) _currentLane = Lane.RIGHT_LANE;
+
+        Debug.Log("Current Lane reading: " + _currentLane.ToString());
 
         _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
         Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance));
