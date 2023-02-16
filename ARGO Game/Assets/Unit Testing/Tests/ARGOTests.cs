@@ -35,6 +35,11 @@ public class ARGOTests
         Object.Destroy(enviroment.gameObject);
         Object.Destroy(camObj.gameObject);
     }
+
+    /// <summary>
+    /// Tests if the player is able to slide
+    /// </summary>
+    /// <returns>Player's new scale</returns>
     [UnityTest]
     public IEnumerator PlayerSlides()
     {
@@ -55,7 +60,11 @@ public class ARGOTests
 
     }
 
-        [UnityTest]
+    /// <summary>
+    /// Tests if the player is able to jump
+    /// </summary>
+    /// <returns>Player's new position</returns>
+    [UnityTest]
     public IEnumerator PlayerJumps()
     {
         // Use the Assert class to test conditions.
@@ -76,7 +85,10 @@ public class ARGOTests
         Debug.Log("Position start: " + positionStart.y + "\n" + "Position End: " + positionEnd.y);
     }
 
-
+    /// <summary>
+    /// Tests if the player moves the left of the original position
+    /// </summary>
+    /// <returns>Player's new position</returns>
     [UnityTest]
     public IEnumerator PlayerMovesLeft()
     {
@@ -99,6 +111,11 @@ public class ARGOTests
         Debug.Log("Position start: " + positionStart + "\n" + "Position End: " + positionEnd);
     }
 
+
+    /// <summary>
+    /// Tests if the player is able to move right
+    /// </summary>
+    /// <returns>Player's new right</returns>
     [UnityTest]
     public IEnumerator PlayerMovesRight()
     {
@@ -119,6 +136,10 @@ public class ARGOTests
         Debug.Log("Position start: " + positionStart + "\n" + "Position End: " + positionEnd);
     }
 
+    /// <summary>
+    /// Tests the spawning on items
+    /// </summary>
+    /// <returns></returns>
     [UnityTest]
     public IEnumerator Spawn()
     {
@@ -131,6 +152,8 @@ public class ARGOTests
         Assert.GreaterOrEqual(gameObjects.Length,0);
     }
 
+
+    //Tests if obstacles collide with the player
     [UnityTest]
     public IEnumerator CollisionTest()
     {
@@ -139,6 +162,11 @@ public class ARGOTests
         UnityEngine.Assertions.Assert.IsNull(rock);
     }
 
+
+    /// <summary>
+    /// Tests if the scenes can change with a button press
+    /// </summary>
+    /// <returns></returns>
     [UnityTest]
     public IEnumerator SceneChanger()
     {
