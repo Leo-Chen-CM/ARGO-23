@@ -31,14 +31,26 @@ public class FuzzyTest : MonoBehaviour
 
         m_right = m_moveRight.Evaluate(t_inputValue);
 
-        if(m_left > m_stay && m_left > m_right)
-        {
-            _moveLeft = true;
-        }
-        else if(m_right > m_left && m_right > m_stay)
+        if(_aiUnit._currentLane == BotHandler.Lane.LEFT_LANE)
         {
             _moveRight = true;
         }
+
+        else if(_aiUnit._currentLane != BotHandler.Lane.RIGHT_LANE)
+        {
+            _moveLeft = true;
+        }
+
+        if(m_left > m_stay && m_left > m_right && _aiUnit._currentLane != BotHandler.Lane.LEFT_LANE)
+        {
+            _moveLeft = true;
+        }
+
+        else if(m_right > m_left && m_right > m_stay && _aiUnit._currentLane != BotHandler.Lane.RIGHT_LANE)
+        {
+            _moveRight = true;
+        }
+
 
 
         _aiUnit.HandleInput(_moveLeft, _moveRight);
@@ -46,6 +58,6 @@ public class FuzzyTest : MonoBehaviour
         _moveLeft = false;
         _moveRight = false;
 
-        Debug.Log("m_left: " + m_left + "\n m_stay: " + m_stay + "\nm_right: " + m_right);
+        //Debug.Log("m_left: " + m_left + "\n m_stay: " + m_stay + "\nm_right: " + m_right);
     }
 }
