@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5585500744148425660}
   - component: {fileID: 8099265395328860560}
   - component: {fileID: -8348198689050868768}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rat_2_Brighter
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
