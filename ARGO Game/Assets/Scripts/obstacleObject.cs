@@ -6,6 +6,7 @@ public class obstacleObject : Obstacle
 {
 
     public float speed;
+    public GameObject gm;
 
     private void FixedUpdate()
     {
@@ -25,6 +26,13 @@ public class obstacleObject : Obstacle
     public override void Interaction()
     {
        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            gm.gameObject.GetComponent<gameManager>().reduceHealth();
+        }
     }
 
 }
