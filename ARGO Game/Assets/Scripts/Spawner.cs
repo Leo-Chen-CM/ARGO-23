@@ -14,9 +14,18 @@ public class Spawner : NetworkBehaviour
     public Transform uprightSpawn;
     private float waitTime;
     private float speed;
+    public int SpiderCount = 0;
+    public int ShieldCount = 0;
+    public int LavaCount = 0;
+
+
 
     [SerializeField] public GameObject obstacle;
     [SerializeField] public GameObject pickup;
+    [SerializeField] public GameObject Spider;
+    [SerializeField] public GameObject Shield;
+    [SerializeField] public GameObject LavaPickup;
+
 
     private Vector3[] positions;
 
@@ -45,6 +54,10 @@ public class Spawner : NetworkBehaviour
         offset.y /= 2;
         offset.z = 0;
         StartCoroutine(spawnPickups());
+        StartCoroutine(spawnLavaPickup());
+        StartCoroutine(spawnSpider());
+        StartCoroutine(spawnShield());
+      
         yield return new WaitForSeconds(waitTime / 2.0f);
         while (true)
         {
@@ -71,4 +84,63 @@ public class Spawner : NetworkBehaviour
             yield return new WaitForSeconds(waitTime);
         }
     }
+
+
+
+    private IEnumerator spawnSpider()
+    {
+        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
+        offset.x = 0;
+        offset.y /= 2;
+        offset.z = 0;
+
+        while (SpiderCount<1)
+        {
+            
+            GameObject NewSpider = Instantiate(Spider, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
+            NetworkServer.Spawn(NewSpider);
+            yield return new WaitForSeconds(waitTime);
+            Debug.Log("spider count " + SpiderCount);
+            SpiderCount = 1;
+         
+        }
+    }
+
+    private IEnumerator spawnShield()
+    {
+        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
+        offset.x = 0;
+        offset.y /= 2;
+        offset.z = 0;
+
+        while (ShieldCount < 1)
+        {
+
+            GameObject NewShield = Instantiate(Shield, positions[Random.Range(0, 6)] + offset, Quaternion.identity);
+            NetworkServer.Spawn(NewShield);
+            yield return new WaitForSeconds(waitTime);
+            Debug.Log("ShieldCount " + ShieldCount);
+            ShieldCount = 1;
+            
+        }
+    }
+    private IEnumerator spawnLavaPickup()
+    {
+        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
+        offset.x = 0;
+        offset.y /= 2;
+        offset.z = 0;
+
+        while (LavaCount < 1)
+        {
+
+            GameObject NewLavaPickup = Instantiate(LavaPickup, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
+            NetworkServer.Spawn(NewLavaPickup);
+            yield return new WaitForSeconds(waitTime);
+            Debug.Log("NewLavaPickup: " + LavaCount);
+            LavaCount = 1;
+
+        }
+    }
+
 }
