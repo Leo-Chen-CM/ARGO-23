@@ -20,12 +20,19 @@ public class gameManager : MonoBehaviour
         healthbar.maxValue = health;
         healthbar.value = health;
         maxHealth = health;
+        if (scoreText != null)
+        {
+            scoreText.SetText("score: " + score.ToString());
+        }
     }
 
     public void addScore()
     {
-        score++;
-        scoreText.SetText("score: " + score.ToString());
+        if (scoreText != null)
+        {
+            score++;
+            scoreText.SetText("score: " + score.ToString());
+        }
     }
 
     public float getSpeed()
