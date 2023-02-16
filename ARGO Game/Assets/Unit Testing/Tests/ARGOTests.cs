@@ -33,16 +33,14 @@ public class ARGOTests
     }
 
 
-    //[Test]
-    //public void ARGOTestsSimpleFail()
-    //{
+    [Test]
+    public void ARGOTestsSimpleFail()
+    {
 
-    //    //InputHandler
+        //InputHandler
 
-    //    Assert.LessOrEqual(2, 1);
-    //}
-
-
+        Assert.LessOrEqual(2, 1);
+    }
 
     [UnityTest]
     public IEnumerator PlayerMovesLeft()
@@ -64,7 +62,17 @@ public class ARGOTests
 
         Vector3 positionEnd = player.GetComponent<Transform>().position;
 
-        Assert.LessOrEqual(positionEnd.x, positionStart.x);
+        Debug.Log("Position start: " + positionStart + "\n" + "Position End: " + positionEnd);
+
+        Assert.Less(positionEnd.x, positionStart.x);
+
+        Debug.Log("Position start: " + positionStart + "\n" + "Position End: " + positionEnd);
+    }
+
+    [UnityTest]
+    public IEnumerator P()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }
 
