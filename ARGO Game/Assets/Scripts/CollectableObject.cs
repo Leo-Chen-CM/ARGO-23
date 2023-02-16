@@ -24,6 +24,6 @@ public class CollectableObject : Obstacle
 
     public override void Interaction()
     {
-
+        Debug.Log("interacted with collectable");
     }
 }
