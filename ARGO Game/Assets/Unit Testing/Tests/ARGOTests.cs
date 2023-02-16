@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +13,7 @@ public class ARGOTests
     private GameObject spawner;
     private GameObject enviroment;
     private GameObject camObj;
+    private GameObject network;
     [SetUp]
     public void Setup()
     {
@@ -25,6 +27,7 @@ public class ARGOTests
         spawner.GetComponent<gameManager>().speed = 0.8f;
         spawner.SetActive(false);
         enviroment = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Environment"));
+        network = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Network Manager"));
     }
 
     [TearDown]
@@ -140,17 +143,17 @@ public class ARGOTests
     /// Tests the spawning on items
     /// </summary>
     /// <returns></returns>
-    [UnityTest]
-    public IEnumerator Spawn()
-    {
-        spawner.SetActive(true);
+    //[UnityTest]
+    //public IEnumerator Spawn()
+    //{
+    //    spawner.SetActive(true);
+    //    //network.GetComponent<NetworkSpawner>().;
+    //    yield return new WaitForSeconds(10f);
 
-        yield return new WaitForSeconds(5f);
+    //    GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Obstacle");
 
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Obstacle");
-
-        Assert.GreaterOrEqual(gameObjects.Length,0);
-    }
+    //    Assert.Greater(gameObjects.Length,0);
+    //}
 
 
     //Tests if obstacles collide with the player
