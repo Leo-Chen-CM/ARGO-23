@@ -21,7 +21,6 @@ public class BotHandler : MonoBehaviour
 
     FuzzyTest _ft;
 
-    public float _test;
 
     Difficulty _diff;
     public Lane _currentLane;
@@ -51,7 +50,7 @@ public class BotHandler : MonoBehaviour
 
         _unit = GetComponent<Unit>();
 
-        _diff = Difficulty.HARD;
+        _diff = Difficulty.EASY;
 
         _currentLane = Lane.MIDDLE_LANE;
 
@@ -79,7 +78,7 @@ public class BotHandler : MonoBehaviour
         else if (transform.position.x > -1f && transform.position.x < 1f) _currentLane = Lane.MIDDLE_LANE;
         else if (transform.position.x > 1f) _currentLane = Lane.RIGHT_LANE;
 
-        Debug.Log("Current Lane reading: " + _currentLane.ToString());
+        //Debug.Log("Current Lane reading: " + _currentLane.ToString());
 
         _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
         Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance));
@@ -128,7 +127,7 @@ public class BotHandler : MonoBehaviour
 
             _percentileDifferential = Random.Range(0, 100);
 
-            Debug.Log("Percentage output: " + _percentileDifferential);
+            //Debug.Log("Percentage output: " + _percentileDifferential);
             switch (_diff)
             {
                 case Difficulty.EASY:
@@ -153,18 +152,17 @@ public class BotHandler : MonoBehaviour
                     break;
             }
 
-            int _switchLeftRight = Random.Range(0, 1);
-            switch (_switchLeftRight)
+            int _switchLeftRight = Random.Range(0, 10);
+            if(_switchLeftRight <= 5)
             {
-                case 0:
-                    _initial_weight -= _differential;
-                    break;
-                case 1:
-                    _initial_weight += _differential;
-                    break;
-                default:
-                    break;
+                _initial_weight -= _differential;
             }
+            else if(_switchLeftRight > 5 && _switchLeftRight <= 10)
+            {
+                _initial_weight += _differential;
+            }
+
+           // Debug.Log("Current Move decision: " + _switchLeftRight);
         }
         return _initial_weight;
 
