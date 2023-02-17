@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5241110572641962569}
   - component: {fileID: 767131022668713407}
   - component: {fileID: 8127917701421303128}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: lidia_0
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &-6551134531518230023
 MonoBehaviour:
@@ -174,6 +174,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   _unit: {fileID: 5241110572641962569}
+  _offline: 0
 --- !u!114 &5241110572641962569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +191,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _rayDistance: 1
+  poisioned: 1
   _jumpForce: 5
   _rb: {fileID: 6961854600647223080}
 --- !u!114 &767131022668713407

@@ -18,7 +18,7 @@ public class Unit : MonoBehaviour
     Ray _ray;
     Color _color;
     public float _jumpForce = 5;
-    private int waitTime = 3;
+    private float waitTime = 1.5f;
     public Rigidbody _rb;
 
   //  private gameManager gm;
@@ -91,7 +91,7 @@ public class Unit : MonoBehaviour
            
            _color.g += 0.005f;
            gameObject.GetComponent<SpriteRenderer>().material.color = _color;
-            Debug.Log(_color.g);
+           
            yield return new WaitForSeconds(waitTime);
             _color.g = 0;
             poisioned = false;
