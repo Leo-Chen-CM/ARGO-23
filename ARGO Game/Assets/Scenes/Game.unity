@@ -503,6 +503,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Network Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 3576595991261007847, guid: 7ec86468e31f0fd45bcf64699306b2c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3576595991261007851, guid: 7ec86468e31f0fd45bcf64699306b2c4,
         type: 3}
       propertyPath: m_RootOrder

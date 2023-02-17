@@ -26,7 +26,7 @@ public class InputHandler : NetworkBehaviour
         FindObjectOfType<gameManager>().Reset();
     }
 
-        [Client]
+    [Client]
     private void Update()
     {
         if (!isOwned) return;
