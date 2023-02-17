@@ -8,7 +8,7 @@ using UnityEngine;
 public class CommandJump : ICommand
 {
    
-    public override void Execute(Unit t_unit, ICommand t_com)
+    public void Execute(Unit t_unit, ICommand t_com)
     {
         Move(t_unit);
 
@@ -16,7 +16,7 @@ public class CommandJump : ICommand
 
     }
 
-    public override void Move(Unit _unit)
+    public void Move(Unit _unit)
     {
         if (_unit.IsGrounded())
         {
