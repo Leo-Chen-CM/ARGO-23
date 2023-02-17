@@ -29,7 +29,7 @@ public class Unit : MonoBehaviour
         _color = GetComponent<SpriteRenderer>().material.color;
     }
 
-        private void Update()
+    private void Update()
     {
         // Update our ray info so we are constantly drawing from player current position
         _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
