@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: aa86dc67d1e2fbc47a9904a0994d759f
-  - enabled: 0
-    path: Assets/Scenes/Leo's Scene.unity
-    guid: ec3af03dd4ba52a42807f622befb5755
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0b6ddb2e84efa5049826ce21fcb2da8e,
       type: 2}

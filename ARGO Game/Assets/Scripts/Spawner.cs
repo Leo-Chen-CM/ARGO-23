@@ -28,7 +28,26 @@ public class Spawner : NetworkBehaviour
 
 
     private Vector3[] positions;
+    //private void Start()
+    //{
+    //    if (!isServer)
+    //    {
+    //        positions = new Vector3[6];
+    //        positions[0] = leftSpawn.position;
+    //        positions[1] = midSpawn.position;
+    //        positions[2] = rightSpawn.position;
+    //        positions[3] = upleftSpawn.position;
+    //        positions[4] = upmidSpawn.position;
+    //        positions[5] = uprightSpawn.position;
+    //        if (FindObjectOfType<gameManager>())
+    //        {
+    //            speed = FindObjectOfType<gameManager>().getSpeed();
+    //            waitTime = 1.0f / speed;
+    //        }
 
+    //        StartCoroutine(spawnObstacles());
+    //    }
+    //}
     public override void OnStartServer()
     {
         positions = new Vector3[6];
