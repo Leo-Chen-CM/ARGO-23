@@ -9,6 +9,11 @@ public class InputHandler : NetworkBehaviour
     private ICommand _bA, _bD, _bS, _bSpace; // Our buttons A, D, S, Space so we can link the button to any command at runtime
     public static List<ICommand> _oldCommands = new List<ICommand>(); // If we store commands in a list we can backtrack through commands
 
+    // For mobile
+    private Vector2 _startPos; // Start position of the screen swipe
+    private int _pixelDistToDetect = 30;
+    private bool _fingerDown;
+    public bool _offline;
 
     private void Awake()
     {
@@ -29,7 +34,8 @@ public class InputHandler : NetworkBehaviour
         [Client]
     private void Update()
     {
-        if (!isOwned) return;
+        if (!isOwned || !_offline) return;
+        HandleInput();
     }
 
     public void OnJump()
