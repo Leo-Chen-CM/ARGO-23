@@ -21,10 +21,11 @@ public class Unit : MonoBehaviour
     private float waitTime = 1.5f;
     public Rigidbody _rb;
 
-  //  private gameManager gm;
+    private gameManager gm;
 
     private void Start()
     {
+        gm = FindObjectOfType<gameManager>();
         _rb = GetComponent<Rigidbody>();
         _color = GetComponent<SpriteRenderer>().material.color;
     }
@@ -66,22 +67,22 @@ public class Unit : MonoBehaviour
     }
 
     // currently triggers for all players not just user - action required
-    ////private void OnTriggerEnter(Collider other)
-    ////{
-    ////    if (other.tag == "Pickup")
-    ////    {
-    ////        gm.addScore();
-    ////        Destroy(other.gameObject);
-    ////    }
-    ////    else if (other.tag == "Obstacle")
-    ////    {
-    ////        if (!gm.reduceHealth())
-    ////        {
-    ////            Debug.Log("player died");
-    ////        }
-    ////        Destroy(other.gameObject);
-    ////    }
-    ////}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Pickup")
+        {
+            gm.addScore();
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "Obstacle")
+        {
+            if (!gm.reduceHealth())
+            {
+                Debug.Log("player died");
+            }
+            Destroy(other.gameObject);
+        }
+    }
     private IEnumerator poisonedChecker()
     {
       
