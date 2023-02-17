@@ -115,7 +115,7 @@ MonoBehaviour:
   speed: 1.5
   ShieldField: {fileID: 4569176629462503428, guid: a3067b36d7fedda48a45c72a4689476f,
     type: 3}
-  spawner: {fileID: 2379754799514549240, guid: 71d8e1bf4a7c7bd468a0770dec2beff4, type: 3}
+  spawner: {fileID: 2460286750823966618, guid: 71d8e1bf4a7c7bd468a0770dec2beff4, type: 3}
   PLayerTransform: {fileID: 2202475860112787697, guid: d717189a18aaf704aa48485213ad0b1e,
     type: 3}
 --- !u!114 &3753488534193086600

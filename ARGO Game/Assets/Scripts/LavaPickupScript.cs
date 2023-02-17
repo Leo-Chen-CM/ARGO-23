@@ -7,7 +7,7 @@ public class LavaPickupScript : Obstacle
     public float speed;
     public GameObject spawner;
     public GameObject lavaFloor;
-    float LavaLiveTime=25.0f;
+    float LavaLiveTime=10.0f;
     public GameObject gm;
     Vector3 floorVec;
    
