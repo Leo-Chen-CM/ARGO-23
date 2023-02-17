@@ -2,13 +2,13 @@
     "name": "PlayerMappings",
     "maps": [
         {
-            "name": "Touch",
+            "name": "Player",
             "id": "e82c31f8-80b5-4577-9b7a-955ef26ff7a7",
             "actions": [
                 {
                     "name": "Turn",
                     "type": "Value",
-                    "id": "25daa023-100d-4c1f-b697-4735b51c1195",
+                    "id": "c4ed63b9-c935-4acc-bd08-b78133530a12",
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
@@ -17,8 +17,8 @@
                 {
                     "name": "Jump",
                     "type": "PassThrough",
-                    "id": "f02cdbe3-9c09-47d6-bdab-ba2292b2d57b",
-                    "expectedControlType": "",
+                    "id": "0a37e80b-9db1-4f32-92f3-ce07c3d34c3d",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -26,8 +26,8 @@
                 {
                     "name": "Slide",
                     "type": "PassThrough",
-                    "id": "593a5821-6cdf-4f83-8aeb-93eb5644d932",
-                    "expectedControlType": "",
+                    "id": "00154a97-f3aa-4382-b77b-f6fbd457d2ab",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -36,61 +36,62 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "494063da-3e7f-4ab5-bfce-4f490459f9d0",
-                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "id": "52729a4b-3895-4cc3-ba18-7543588c9d48",
+                    "path": "<Touchscreen>/delta/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Mobile",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33fc6074-fc78-4cda-b869-4a17d3305bda",
+                    "path": "<Touchscreen>/delta/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e72b7a8-b451-412f-a5f4-3d1e4d97b13a",
+                    "path": "<Touchscreen>/delta/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "087f4fc3-3a28-48fd-ad30-9a0f852638b2",
-                    "path": "<Touchscreen>/delta/up",
+                    "id": "60619eaf-8c2b-4ce4-887c-6208c62a1425",
+                    "path": "<Touchscreen>/delta/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Mobile",
                     "action": "Slide",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "Swipe",
-                    "id": "a797c45e-ba2a-4606-b865-139a8aaf812a",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Turn",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "be5cbc78-ba42-48b6-bf14-a1b884718995",
-                    "path": "<Touchscreen>/primaryTouch/delta/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Turn",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "bdd82e6c-dbb7-4d0f-811f-fe561221767d",
-                    "path": "<Touchscreen>/primaryTouch/delta/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Turn",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Mobile",
+            "bindingGroup": "Mobile",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }
