@@ -57,7 +57,7 @@ MonoBehaviour:
   networkAddress: localhost
   maxConnections: 4
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 8227058194074949301, guid: 6f81885b1af0e7f458f22cd9d973a9ac,
+  playerPrefab: {fileID: 2202475860112787710, guid: d717189a18aaf704aa48485213ad0b1e,
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 1
