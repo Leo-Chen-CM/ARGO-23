@@ -35,7 +35,7 @@ public class InputHandler : NetworkBehaviour
     private void Update()
     {
         if (!isOwned || !_offline) return;
-        HandleInput();
+       // HandleInput();
     }
 
     public void OnJump()
