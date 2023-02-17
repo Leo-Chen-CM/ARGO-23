@@ -8,15 +8,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5520275771620367810}
-  - component: {fileID: 5520275771620367811}
-  - component: {fileID: 5520275771620367812}
-  - component: {fileID: 5520275771620367823}
-  - component: {fileID: 5520275771620367809}
-  - component: {fileID: -7116691575014038679}
+  - component: {fileID: 5585500744148425658}
+  - component: {fileID: 5585500744148425661}
+  - component: {fileID: 5585500744148425660}
+  - component: {fileID: 8099265395328860560}
+  - component: {fileID: 5095401710121474342}
+  - component: {fileID: 5027302879277601012}
   m_Layer: 7
-  m_Name: 'spider01_0 '
-  m_TagString: spider
+  m_Name: rat_0 1
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
