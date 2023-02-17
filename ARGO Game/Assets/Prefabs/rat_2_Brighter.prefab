@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   gm: {fileID: 7804843690267304042, guid: a45936f2bc3dfc94fbbac1c1046ca11c, type: 3}
+  player: {fileID: 2202475860112787710, guid: d717189a18aaf704aa48485213ad0b1e, type: 3}
 --- !u!65 &-8348198689050868768
 BoxCollider:
   m_ObjectHideFlags: 0

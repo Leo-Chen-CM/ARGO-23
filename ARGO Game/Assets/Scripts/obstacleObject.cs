@@ -7,6 +7,7 @@ public class obstacleObject : Obstacle
 
     public float speed;
     public GameObject gm;
+    public GameObject player;
 
     private void FixedUpdate()
     {
@@ -32,6 +33,7 @@ public class obstacleObject : Obstacle
         if (other.gameObject.CompareTag("Player"))
         {
             gm.gameObject.GetComponent<gameManager>().reduceHealth();
+            player.gameObject.GetComponent<Unit>().poisioned = true;
         }
     }
 
