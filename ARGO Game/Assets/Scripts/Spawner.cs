@@ -12,40 +12,26 @@ public class Spawner : NetworkBehaviour
     public Transform upleftSpawn;
     public Transform upmidSpawn;
     public Transform uprightSpawn;
-    private float waitTime;
+    private float coinTime;
+    private float obstacleTime;
+    private float pickUpTime;
     private float speed;
-  
 
+    private int numberOfCoinSpawned = 0;
 
+    Vector3 offset;
 
-    [SerializeField] public GameObject obstacle;
-    [SerializeField] public GameObject pickup;
-    [SerializeField] public GameObject Spider;
-    [SerializeField] public GameObject Shield;
-    [SerializeField] public GameObject LavaPickup;
+    bool coinsSet = false;
+    int getLaneToSpawn;
+    int maxCoinsToSpawn = 0;
 
-
+    [SerializeField] public GameObject[] obstacles;
+    [SerializeField] public GameObject[] pickups;
+    [SerializeField] public GameObject Coin;
+    
     private Vector3[] positions;
-    //private void Start()
-    //{
-    //    if (!isServer)
-    //    {
-    //        positions = new Vector3[6];
-    //        positions[0] = leftSpawn.position;
-    //        positions[1] = midSpawn.position;
-    //        positions[2] = rightSpawn.position;
-    //        positions[3] = upleftSpawn.position;
-    //        positions[4] = upmidSpawn.position;
-    //        positions[5] = uprightSpawn.position;
-    //        if (FindObjectOfType<gameManager>())
-    //        {
-    //            speed = FindObjectOfType<gameManager>().getSpeed();
-    //            waitTime = 1.0f / speed;
-    //        }
 
-    //        StartCoroutine(spawnObstacles());
-    //    }
-    //}
+    [Server]
     public override void OnStartServer()
     {
         positions = new Vector3[6];
@@ -55,116 +41,98 @@ public class Spawner : NetworkBehaviour
         positions[3] = upleftSpawn.position;
         positions[4] = upmidSpawn.position;
         positions[5] = uprightSpawn.position;
+
+        offset = obstacles[0].GetComponent<Renderer>().bounds.size;
+        offset.x = 0;
+        offset.y /= 2;
+        offset.z = 0;
         if (FindObjectOfType<gameManager>())
         {
             speed = FindObjectOfType<gameManager>().getSpeed();
-            waitTime = 1.0f / speed;
+            obstacleTime = 1.0f / speed;
+            coinTime = .2f / speed;
+            pickUpTime = 10.0f / speed;
         }
 
         StartCoroutine(spawnObstacles());
+        StartCoroutine(spawnPickups());
+        StartCoroutine(spawnCoins());
     }
 
+    [Server]
     private IEnumerator spawnObstacles()
     {
-        Vector3 offset = obstacle.GetComponent<Renderer>().bounds.size;
-        offset.x = 0;
-        offset.y /= 2;
-        offset.z = 0;
-        StartCoroutine(spawnPickups());
-        StartCoroutine(spawnLavaPickup());
-        StartCoroutine(spawnSpider());
-        StartCoroutine(spawnShield());
-      
-        yield return new WaitForSeconds(waitTime / 2.0f);
+        yield return new WaitForSeconds(obstacleTime / 2.0f);
         while (true)
         {
-            GameObject newObs = Instantiate(obstacle, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
-            newObs.GetComponent<obstacleObject>().speed = speed;
-            newObs.gameObject.transform.SetParent(this.transform);
+            int getRandomObstacle = Random.Range(0, obstacles.Length);
+            GameObject newObs = Spawn(obstacles[getRandomObstacle], Random.Range(0, 3));
+            if(getRandomObstacle == 0) newObs.GetComponent<obstacleObject>().speed = speed;
+            else if(getRandomObstacle == 1) newObs.GetComponent<SpiderScript>().speed = speed;
             NetworkServer.Spawn(newObs);
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(obstacleTime);
         }
     }
 
+    [Server]
     private IEnumerator spawnPickups()
     {
-        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
-        offset.x = 0;
-        offset.y /= 2;
-        offset.z = 0;
         while(true)
         {
-            GameObject newPickup = Instantiate(pickup, positions[Random.Range(4, 6)] + offset, Quaternion.identity);
-            newPickup.GetComponent<CollectableObject>().speed = speed;
-            newPickup.gameObject.transform.SetParent(this.transform);
+            int getRandomPickUp = Random.Range(0, pickups.Length);
+            GameObject newPickup = Spawn(pickups[getRandomPickUp], Random.Range(0, 3));
+         
+            if(getRandomPickUp == 0) newPickup.GetComponent<LavaPickupScript>().speed = speed;
+            if(getRandomPickUp == 1) newPickup.GetComponent<shielScript>().speed = speed;
+
             NetworkServer.Spawn(newPickup);
-            waitTime = 1.5f;
-            yield return new WaitForSeconds(waitTime);
-        }
-    }
-
-
-
-    private IEnumerator spawnSpider()
-    {
-        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
-        offset.x = 0;
-        offset.y /= 2;
-        offset.z = 0;
-
-        while (true)
-        {
             
-            GameObject NewSpider = Instantiate(Spider, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
-            NewSpider.GetComponent<CollectableObject>().speed = speed;
-            NewSpider.gameObject.transform.SetParent(this.transform);
-            NetworkServer.Spawn(NewSpider);
-            waitTime = 7.0f;
-            yield return new WaitForSeconds(waitTime);
-          
-          
-         
+            yield return new WaitForSeconds(pickUpTime);
         }
     }
 
-    private IEnumerator spawnShield()
+    [Server]
+    private IEnumerator spawnCoins()
     {
-        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
-        offset.x = 0;
-        offset.y /= 2;
-        offset.z = 0;
-
         while (true)
         {
+            if (!coinsSet) // if we haven't established how many coins to spawn do this before anything else
+            {
+                maxCoinsToSpawn = Random.Range(4, 10);
+                coinsSet = true;
+            }
+                
+            if (numberOfCoinSpawned == 0) getLaneToSpawn = Random.Range(0, 3); // If we haven't started spawning the coins pick a lane to spawn them all in
 
-            GameObject NewShield = Instantiate(Shield, positions[Random.Range(0, 6)] + offset, Quaternion.identity);
-            NewShield.GetComponent<CollectableObject>().speed = speed;
-            NewShield.gameObject.transform.SetParent(this.transform);
-            NetworkServer.Spawn(NewShield);
-            waitTime = 5.0f;
-            yield return new WaitForSeconds(waitTime);
-         
-           
+
+            GameObject newPickup = Spawn(Coin, getLaneToSpawn); // spawn our coin in this lane
+
+            newPickup.GetComponent<CollectableObject>().speed = speed;
+            Debug.Log("Coins to be spawned: " + maxCoinsToSpawn + "\nCurrentNumberofspawnedCoins: " + numberOfCoinSpawned);
+
+            NetworkServer.Spawn(newPickup);
+            numberOfCoinSpawned += 1;
+
+            if(coinTime == 4f)
+            {
+                coinTime = .2f / speed;
+            }
+
+            if (numberOfCoinSpawned == maxCoinsToSpawn)
+            {
+                numberOfCoinSpawned = 0;
+                coinTime = 4f;
+                coinsSet = false;
+            }
+            yield return new WaitForSeconds(coinTime);
             
         }
     }
-    private IEnumerator spawnLavaPickup()
+
+    private GameObject Spawn(GameObject t_objectPrefab, int t_lane)
     {
-        Vector3 offset = pickup.GetComponent<Renderer>().bounds.size;
-        offset.x = 0;
-        offset.y /= 2;
-        offset.z = 0;
-
-        while (true)
-        {
-
-            GameObject NewLavaPickup = Instantiate(LavaPickup, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
-            NewLavaPickup.GetComponent<CollectableObject>().speed = speed;
-            NewLavaPickup.gameObject.transform.SetParent(this.transform);
-            NetworkServer.Spawn(NewLavaPickup);
-            waitTime = 15.0f;
-            yield return new WaitForSeconds(waitTime);
-        }
+        GameObject newPickup = Instantiate(t_objectPrefab, positions[t_lane] + offset, Quaternion.identity);
+        newPickup.gameObject.transform.SetParent(this.transform);
+        return newPickup;
     }
-
 }

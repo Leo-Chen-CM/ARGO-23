@@ -6,7 +6,6 @@ public class shielScript : Obstacle
 {
     public float speed;
     public GameObject ShieldField;
-    public GameObject spawner;
     public Transform PLayerTransform;
     float activeTime = 5.0f;
    
