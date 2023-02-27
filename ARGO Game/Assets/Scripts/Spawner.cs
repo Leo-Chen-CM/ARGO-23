@@ -47,6 +47,7 @@ public class Spawner : NetworkBehaviour
         }
 
         StartCoroutine(spawnObstacles());
+        StartCoroutine(spawnPickups());
     }
 
     [Server]
