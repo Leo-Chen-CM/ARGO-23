@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 767131022668713407}
   - component: {fileID: 8127917701421303128}
   m_Layer: 10
-  m_Name: lidia_0
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,6 +176,7 @@ MonoBehaviour:
   syncInterval: 0.1
   _unit: {fileID: 5241110572641962569}
   _offline: 0
+  onPC: 1
 --- !u!114 &5241110572641962569
 MonoBehaviour:
   m_ObjectHideFlags: 0
