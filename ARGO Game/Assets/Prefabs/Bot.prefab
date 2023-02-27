@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 8628161808916622347}
   - component: {fileID: 8628161808916622344}
   - component: {fileID: 7706031415851953704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bot
-  m_TagString: Untagged
+  m_TagString: Bot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _rayDistance: 1
+  poisioned: 0
   _jumpForce: 5
   _rb: {fileID: 8628161808916622345}
 --- !u!114 &8628161808916622344
@@ -166,8 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad89d21800d8c94428230276e99fae71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _test: 0.15
+  _currentLane: 0
   _unit: {fileID: 8628161808916622347}
+  _differential: 0.5
   _obstacleMask:
     serializedVersion: 2
     m_Bits: 128
@@ -274,6 +276,3 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_fuzz: {fileID: 0}
-  m_operators: {fileID: 0}
-  _unit: {fileID: 0}

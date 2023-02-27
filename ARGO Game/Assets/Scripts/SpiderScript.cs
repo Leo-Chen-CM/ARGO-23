@@ -48,8 +48,8 @@ public class SpiderScript : Obstacle
             GameObject newWeb = Instantiate(SpidersWeb, webPosition, Quaternion.identity);
             Destroy(newWeb,waittime);
             gm.gameObject.GetComponent<gameManager>().reduceHealth();
-            int check= spawner.gameObject.GetComponent<Spawner>().SpiderCount = 0;
-            Debug.Log(check);
+         
+          
         }
     }
 

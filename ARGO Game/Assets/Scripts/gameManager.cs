@@ -16,16 +16,26 @@ public class gameManager : MonoBehaviour
 
     private void Start()
     {
-        scoreText.SetText("score: " + score.ToString());
-        healthbar.maxValue = health;
-        healthbar.value = health;
-        maxHealth = health;
+        if (healthbar != null)
+        {
+            healthbar.maxValue = health;
+            healthbar.value = health;
+            maxHealth = health;
+        }
+
+        if (scoreText != null)
+        {
+            scoreText.SetText("score: " + score.ToString());
+        }
     }
 
     public void addScore()
     {
-        score++;
-        scoreText.SetText("score: " + score.ToString());
+        if (scoreText != null)
+        {
+            score++;
+            scoreText.SetText("score: " + score.ToString());
+        }
     }
 
     public float getSpeed()
@@ -42,8 +52,12 @@ public class gameManager : MonoBehaviour
 
     public void Reset()
     {
-        health = maxHealth;
-        healthbar.value = health;
-        score = 0;
+        if (healthbar != null)
+        {
+            health = maxHealth;
+            healthbar.value = health;
+            score = 0;
+        }
+
     }
 }
