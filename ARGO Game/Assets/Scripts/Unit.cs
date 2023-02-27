@@ -85,8 +85,6 @@ public class Unit : MonoBehaviour
     }
     private IEnumerator poisonedChecker()
     {
-      
-
         while (poisioned == true )
         {
            
