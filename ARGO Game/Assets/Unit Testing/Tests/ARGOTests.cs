@@ -7,26 +7,38 @@ using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
 
+
 public class ARGOTests
 {
     private GameObject player;
+    private GameObject spider;
     private GameObject spawner;
     private GameObject enviroment;
     private GameObject camObj;
     private GameObject network;
+    private GameObject PlayerGameObject;
+    private GameObject SpiderGameObject;
+
     [SetUp]
     public void Setup()
     {
-        GameObject PlayerGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Test Player"));
-
+        PlayerGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Test Player"));
+       
         camObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Main Camera"));
+
         player = PlayerGameObject;
 
+      
         spawner = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Spawner"));
+
         spawner.AddComponent<gameManager>();
+
         spawner.GetComponent<gameManager>().speed = 0.8f;
+
         spawner.SetActive(false);
+
         enviroment = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Environment"));
+
         network = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Network Manager"));
     }
 
@@ -44,12 +56,14 @@ public class ARGOTests
     /// </summary>
     /// <returns>Player's new scale</returns>
     [UnityTest]
+
     public IEnumerator PlayerSlides()
     {
 
         Vector3 scaleStart = player.GetComponent<Transform>().localScale;
 
         CommandSlide _moveSlide = new CommandSlide();
+
         _moveSlide.Execute(player.GetComponent<Unit>(), _moveSlide);
 
         yield return new WaitForSeconds(0.5f);
@@ -68,6 +82,7 @@ public class ARGOTests
     /// </summary>
     /// <returns>Player's new position</returns>
     [UnityTest]
+
     public IEnumerator PlayerJumps()
     {
         // Use the Assert class to test conditions.
@@ -76,10 +91,10 @@ public class ARGOTests
         Vector3 positionStart = player.GetComponent<Transform>().position;
 
         CommandJump _moveJump = new CommandJump();
+
         _moveJump.Execute(player.GetComponent<Unit>(), _moveJump);
 
         yield return new WaitForSeconds(0.5f);
-
 
         Vector3 positionEnd = player.GetComponent<Transform>().position;
 
@@ -93,6 +108,7 @@ public class ARGOTests
     /// </summary>
     /// <returns>Player's new position</returns>
     [UnityTest]
+
     public IEnumerator PlayerMovesLeft()
     {
         // Use the Assert class to test conditions.
@@ -105,8 +121,6 @@ public class ARGOTests
 
         yield return new WaitForSeconds(1f);
 
-
-
         Vector3 positionEnd = player.GetComponent<Transform>().position;
 
         Assert.Less(positionEnd.x, positionStart.x);
@@ -114,12 +128,12 @@ public class ARGOTests
         Debug.Log("Position start: " + positionStart + "\n" + "Position End: " + positionEnd);
     }
 
-
     /// <summary>
     /// Tests if the player is able to move right
     /// </summary>
     /// <returns>Player's new right</returns>
     [UnityTest]
+
     public IEnumerator PlayerMovesRight()
     {
         // Use the Assert class to test conditions.
@@ -139,23 +153,6 @@ public class ARGOTests
         Debug.Log("Position start: " + positionStart + "\n" + "Position End: " + positionEnd);
     }
 
-    /// <summary>
-    /// Tests the spawning on items
-    /// </summary>
-    /// <returns></returns>
-    //[UnityTest]
-    //public IEnumerator Spawn()
-    //{
-    //    spawner.SetActive(true);
-    //    //network.GetComponent<NetworkSpawner>().;
-    //    yield return new WaitForSeconds(10f);
-
-    //    GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Obstacle");
-
-    //    Assert.Greater(gameObjects.Length,0);
-    //}
-
-
     //Tests if obstacles collide with the player
     [UnityTest]
     public IEnumerator CollisionTest()
@@ -165,12 +162,202 @@ public class ARGOTests
         UnityEngine.Assertions.Assert.IsNull(rock);
     }
 
+    /// <summary>
+    /// see if spider moves
+    /// </summary>
+    /// <returns></returns>
+    [UnityTest]
+
+    public IEnumerator SpiderMoves()
+    {
+        SpiderGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/SpiderTest"));
+
+        SpiderGameObject.transform.position = new Vector3(1.4f,-0.4f,53.0f);
+
+        Vector3 positionStart = SpiderGameObject.GetComponent<Transform>().position;
+   
+        yield return new WaitForSeconds(3f);
+
+        Vector3 positionEnd = SpiderGameObject.GetComponent<Transform>().position;
+
+        Assert.Less(positionEnd.z, positionStart.z);
+
+       
+    }
+
+    /// <summary>
+    /// see if Rat moves
+    /// </summary>
+    /// <returns></returns>
+    [UnityTest]
+
+    public IEnumerator RatMoves()
+    {
+        GameObject RatGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/rat_2_Brighter"));
+
+        RatGameObject.transform.position = new Vector3(3.4f, -0.4f, 63.0f);
+
+        Vector3 positionStart = RatGameObject.GetComponent<Transform>().position;
+
+        yield return new WaitForSeconds(1f);
+
+        Vector3 positionEnd = RatGameObject.GetComponent<Transform>().position;
+
+        Assert.Less(positionEnd.z, positionStart.z);
+
+
+    }
+
+    /// <summary>
+    /// see if Lava pickup moves
+    /// </summary>
+    /// <returns></returns>
+    [UnityTest]
+
+    public IEnumerator LavaPickupMoves()
+    {
+        GameObject LavaPickup = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/lavaPickUp"));
+
+        LavaPickup.transform.position = new Vector3(3.4f, -0.4f, 63.0f);
+
+        Vector3 positionStart = LavaPickup.GetComponent<Transform>().position;
+
+        yield return new WaitForSeconds(1f);
+
+        Vector3 positionEnd = LavaPickup.GetComponent<Transform>().position;
+
+        Assert.Less(positionEnd.z, positionStart.z);
+
+
+    }
+
+    /// <summary>
+    /// see if Shield pickup moves
+    /// </summary>
+    /// <returns></returns>
+    [UnityTest]
+
+    public IEnumerator ShieldPickupMoves()
+    {
+        GameObject ShieldPickup = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/shieldIcon"));
+
+        ShieldPickup.transform.position = new Vector3(3.4f, -0.4f, 73.0f);
+
+        Vector3 positionStart = ShieldPickup.GetComponent<Transform>().position;
+
+        yield return new WaitForSeconds(1f);
+
+        Vector3 positionEnd = ShieldPickup.GetComponent<Transform>().position;
+
+        Assert.Less(positionEnd.z, positionStart.z);
+
+
+    }
+
+    /// <summary>
+    /// see if Rock pickup moves
+    /// </summary>
+    /// <returns></returns>
+    [UnityTest]
+
+    public IEnumerator RockMoves()
+    {
+        GameObject Rock = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Rock"));
+
+        Rock.transform.position = new Vector3(3.4f, -0.4f, 73.0f);
+
+        Vector3 positionStart = Rock.GetComponent<Transform>().position;
+
+        yield return new WaitForSeconds(1f);
+
+        Vector3 positionEnd = Rock.GetComponent<Transform>().position;
+
+        Assert.Less(positionEnd.z, positionStart.z);
+
+
+    }
+
+    /// <summary>
+    /// see if coin pickup moves
+    /// </summary>
+    /// <returns></returns>
+    [UnityTest]
+
+    public IEnumerator coinMoves()
+    {
+        GameObject Coin = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/goldCoin1"));
+
+        Coin.transform.position = new Vector3(3.4f, -0.4f, 73.0f);
+
+        Vector3 positionStart = Coin.GetComponent<Transform>().position;
+
+        yield return new WaitForSeconds(1f);
+
+        Vector3 positionEnd = Coin.GetComponent<Transform>().position;
+
+        Assert.Less(positionEnd.z, positionStart.z);
+
+
+    }
+
+    /// <summary>
+    /// see if web gets spawned
+    /// </summary>
+    /// <returns></returns>
+    [UnityTest]
+
+    public IEnumerator WebSpawn()
+    {
+        GameObject Player = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/lidia_0"));
+        GameObject web = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/SpiderWeb"));
+        GameObject spider = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/SpiderTest"));
+
+        spider.transform.position = new Vector3(2.4f,-0.4f,29.0f);
+
+     
+
+        yield return new WaitForSeconds(2f);
+
+
+
+        Assert.Less(web.transform.position.z,53.0f);
+
+
+    }
+
+
+    /// <summary>
+    /// see if Lava  gets spawned  by comparing their posistions
+    /// </summary>
+    /// <returns></returns>
+    [UnityTest]
+
+    public IEnumerator LavaSpawn()
+    {
+        GameObject Player = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/lidia_0"));
+        GameObject Lava = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Lava"));
+        GameObject LavaPickup = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/lavaPickUp"));
+
+        LavaPickup.transform.position = new Vector3(2.4f, -0.4f, 29.0f);
+
+
+
+        yield return new WaitForSeconds(2f);
+
+
+
+        Assert.Less(Lava.transform.position.z, 80.0f);
+
+
+    }
+
 
     /// <summary>
     /// Tests if the scenes can change with a button press
     /// </summary>
     /// <returns></returns>
     [UnityTest]
+
     public IEnumerator SceneChanger()
     {
         //Test Game Scene
