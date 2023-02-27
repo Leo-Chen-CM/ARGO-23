@@ -161,8 +161,7 @@ public class AudioManager : MonoBehaviour
         AudioClip clip = PickRandomAudioClip(_music[music]);
 
         if (_musicSource.clip != clip)
-        {
-            // If the music clip isn't already playing
+        {// if the music clip isn't already playing
             _musicSource.Stop();
             _musicSource.clip = clip;
             _musicSource.Play();
@@ -181,11 +180,9 @@ public class AudioManager : MonoBehaviour
         bool played = false;
 
         for (int i = 0; i < _soundEffectSources.Count; i++)
-        {
-            //Look for an avaialable channel
+        {//look for an avaialable channel
             if (!_soundEffectSources[i].isPlaying)
-            {
-                //If its free play the sound effect
+            {//if its free play the sound effect
                 _soundEffectSources[i].pitch = Random.Range(0.8f, 1.2f);
                 _soundEffectSources[i].PlayOneShot(clip, volume);
                 played = true;

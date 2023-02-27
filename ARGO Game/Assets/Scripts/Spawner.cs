@@ -14,9 +14,7 @@ public class Spawner : NetworkBehaviour
     public Transform uprightSpawn;
     private float waitTime;
     private float speed;
-    public int SpiderCount = 0;
-    public int ShieldCount = 0;
-    public int LavaCount = 0;
+  
 
 
 
@@ -28,7 +26,26 @@ public class Spawner : NetworkBehaviour
 
 
     private Vector3[] positions;
+    //private void Start()
+    //{
+    //    if (!isServer)
+    //    {
+    //        positions = new Vector3[6];
+    //        positions[0] = leftSpawn.position;
+    //        positions[1] = midSpawn.position;
+    //        positions[2] = rightSpawn.position;
+    //        positions[3] = upleftSpawn.position;
+    //        positions[4] = upmidSpawn.position;
+    //        positions[5] = uprightSpawn.position;
+    //        if (FindObjectOfType<gameManager>())
+    //        {
+    //            speed = FindObjectOfType<gameManager>().getSpeed();
+    //            waitTime = 1.0f / speed;
+    //        }
 
+    //        StartCoroutine(spawnObstacles());
+    //    }
+    //}
     public override void OnStartServer()
     {
         positions = new Vector3[6];
@@ -81,6 +98,7 @@ public class Spawner : NetworkBehaviour
             newPickup.GetComponent<CollectableObject>().speed = speed;
             newPickup.gameObject.transform.SetParent(this.transform);
             NetworkServer.Spawn(newPickup);
+            waitTime = 1.5f;
             yield return new WaitForSeconds(waitTime);
         }
     }
@@ -94,14 +112,17 @@ public class Spawner : NetworkBehaviour
         offset.y /= 2;
         offset.z = 0;
 
-        while (SpiderCount<1)
+        while (true)
         {
             
             GameObject NewSpider = Instantiate(Spider, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
+            NewSpider.GetComponent<CollectableObject>().speed = speed;
+            NewSpider.gameObject.transform.SetParent(this.transform);
             NetworkServer.Spawn(NewSpider);
+            waitTime = 7.0f;
             yield return new WaitForSeconds(waitTime);
-            Debug.Log("spider count " + SpiderCount);
-            SpiderCount = 1;
+          
+          
          
         }
     }
@@ -113,14 +134,17 @@ public class Spawner : NetworkBehaviour
         offset.y /= 2;
         offset.z = 0;
 
-        while (ShieldCount < 1)
+        while (true)
         {
 
             GameObject NewShield = Instantiate(Shield, positions[Random.Range(0, 6)] + offset, Quaternion.identity);
+            NewShield.GetComponent<CollectableObject>().speed = speed;
+            NewShield.gameObject.transform.SetParent(this.transform);
             NetworkServer.Spawn(NewShield);
+            waitTime = 5.0f;
             yield return new WaitForSeconds(waitTime);
-            Debug.Log("ShieldCount " + ShieldCount);
-            ShieldCount = 1;
+         
+           
             
         }
     }
@@ -131,15 +155,15 @@ public class Spawner : NetworkBehaviour
         offset.y /= 2;
         offset.z = 0;
 
-        while (LavaCount < 1)
+        while (true)
         {
 
             GameObject NewLavaPickup = Instantiate(LavaPickup, positions[Random.Range(0, 3)] + offset, Quaternion.identity);
+            NewLavaPickup.GetComponent<CollectableObject>().speed = speed;
+            NewLavaPickup.gameObject.transform.SetParent(this.transform);
             NetworkServer.Spawn(NewLavaPickup);
+            waitTime = 15.0f;
             yield return new WaitForSeconds(waitTime);
-            Debug.Log("NewLavaPickup: " + LavaCount);
-            LavaCount = 1;
-
         }
     }
 
