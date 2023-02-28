@@ -8,6 +8,7 @@ public class shielScript : Obstacle
     public GameObject ShieldField;
     public Transform PLayerTransform;
     float activeTime = 5.0f;
+    public GameObject gm;
    
 
     private void FixedUpdate()
