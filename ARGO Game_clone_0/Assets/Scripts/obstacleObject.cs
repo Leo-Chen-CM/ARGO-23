@@ -11,6 +11,7 @@ public class obstacleObject : Obstacle
 
     private void FixedUpdate()
     {
+        speed = 1;
         Movement();
     }
 
