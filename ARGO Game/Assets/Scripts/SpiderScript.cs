@@ -16,7 +16,7 @@ public class SpiderScript : Obstacle
     private void Start()
     {
         webPosition = new Vector3(0f, 0.797f, -5.878f);
-      
+        speed = 1;
       
     }
     private void FixedUpdate()
