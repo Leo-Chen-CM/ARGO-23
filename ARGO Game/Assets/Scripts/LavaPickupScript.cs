@@ -5,7 +5,6 @@ using UnityEngine;
 public class LavaPickupScript : Obstacle
 {
     public float speed;
-    public GameObject spawner;
     public GameObject lavaFloor;
     float LavaLiveTime=10.0f;
     public GameObject gm;
@@ -17,6 +16,7 @@ public class LavaPickupScript : Obstacle
         floorVec = transform.position;
         floorVec.y = floorVec.y - 1.2f;
         floorVec.z = floorVec.z - 38;
+        speed = 1;
     }
 
     private void FixedUpdate()

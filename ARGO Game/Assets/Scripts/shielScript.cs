@@ -6,7 +6,6 @@ public class shielScript : Obstacle
 {
     public float speed;
     public GameObject ShieldField;
-    public GameObject spawner;
     public Transform PLayerTransform;
     float activeTime = 5.0f;
    
@@ -37,8 +36,16 @@ public class shielScript : Obstacle
         if (other.gameObject.CompareTag("Player"))
         {
             Vector3 offset = new Vector3( 0.0f,0.55f,0.0f);
-            GameObject newWeb = Instantiate(ShieldField, PLayerTransform.position- offset, Quaternion.identity);
-            Destroy(newWeb, activeTime);
+            GameObject newShield = Instantiate(ShieldField, PLayerTransform.position- offset, Quaternion.identity);
+            if(newShield.gameObject.activeInHierarchy==true)
+            {
+                gm.gameObject.GetComponent<gameManager>().isShieldActive= true;
+            }
+            else if(newShield.gameObject.activeInHierarchy==false)
+            {
+                gm.gameObject.GetComponent<gameManager>().isShieldActive = false;
+            }
+            Destroy(newShield, activeTime);
         }
     }
 }
