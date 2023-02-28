@@ -44,11 +44,9 @@ public class LavaPickupScript : Obstacle
         if (other.gameObject.CompareTag("Player"))
         {
 
-            gm.gameObject.GetComponent<gameManager>().reduceHealth();
             GameObject newLavaFloor = Instantiate(lavaFloor, floorVec, Quaternion.identity);
             Destroy(newLavaFloor, LavaLiveTime);
-            //int check = spawner.gameObject.GetComponent<Spawner>().SpiderCount = 0;
-            //Debug.Log(check);
+           
         }
     }
 }

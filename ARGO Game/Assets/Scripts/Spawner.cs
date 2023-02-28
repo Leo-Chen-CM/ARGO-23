@@ -127,7 +127,7 @@ public class Spawner : NetworkBehaviour
                 coinsSet = false;
             }
             yield return new WaitForSeconds(coinTime);
-          
+            
         }
     }
 
