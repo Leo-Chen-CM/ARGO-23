@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class CommandMoveLeft : ICommand
 {
-    private float _leftBound = -3.5f;
+    private float _leftBound = -3.4f;
     public void Execute(Unit t_unit, ICommand t_com)
     {
         Move(t_unit);
