@@ -13,6 +13,7 @@ public class gameManager : MonoBehaviour
     public float speed;
     public int health;
     private int maxHealth;
+    public bool isShieldActive = false;
 
     private void Start()
     {
@@ -45,7 +46,15 @@ public class gameManager : MonoBehaviour
 
     public bool reduceHealth()
     {
-        health--;
+        if(isShieldActive==false)
+        {
+            health--;
+        }
+        else
+        {
+            health++;
+        }
+       
         healthbar.value = health;
         return health > 0;
     }

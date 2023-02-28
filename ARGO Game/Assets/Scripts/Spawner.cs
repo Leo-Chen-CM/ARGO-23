@@ -137,7 +137,7 @@ public class Spawner : NetworkBehaviour
         while (true)
         {
 
-            GameObject NewShield = Instantiate(Shield, positions[Random.Range(0, 6)] + offset, Quaternion.identity);
+            GameObject NewShield = Instantiate(Shield, positions[Random.Range(1, 0)] + offset, Quaternion.identity);
             NewShield.GetComponent<CollectableObject>().speed = speed;
             NewShield.gameObject.transform.SetParent(this.transform);
             NetworkServer.Spawn(NewShield);
