@@ -8,6 +8,7 @@ public class CollectableObject : Obstacle
 
     private void FixedUpdate()
     {
+        speed = 1;
         Movement();
     }
 
