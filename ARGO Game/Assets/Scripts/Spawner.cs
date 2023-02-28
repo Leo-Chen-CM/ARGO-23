@@ -69,6 +69,7 @@ public class Spawner : NetworkBehaviour
             GameObject newObs = Spawn(obstacles[getRandomObstacle], Random.Range(0, 3));
             if(getRandomObstacle == 0) newObs.GetComponent<obstacleObject>().speed = speed;
             else if(getRandomObstacle == 1) newObs.GetComponent<SpiderScript>().speed = speed;
+			
             NetworkServer.Spawn(newObs);
             yield return new WaitForSeconds(obstacleTime);
         }
