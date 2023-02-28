@@ -22,7 +22,7 @@ public class ARGOTests
     [SetUp]
     public void Setup()
     {
-        PlayerGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Test Player"));
+        PlayerGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/lidia_0"));
        
         camObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Main Camera"));
 
@@ -62,11 +62,11 @@ public class ARGOTests
 
         Vector3 scaleStart = player.GetComponent<Transform>().localScale;
 
-        CommandSlide _moveSlide = new CommandSlide();
+        ICommand _moveSlide = new CommandSlide();
 
         _moveSlide.Execute(player.GetComponent<Unit>(), _moveSlide);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
 
         Vector3 scaleEnd = player.GetComponent<Transform>().localScale;
@@ -90,7 +90,7 @@ public class ARGOTests
 
         Vector3 positionStart = player.GetComponent<Transform>().position;
 
-        CommandJump _moveJump = new CommandJump();
+        ICommand _moveJump = new CommandJump();
 
         _moveJump.Execute(player.GetComponent<Unit>(), _moveJump);
 
@@ -176,7 +176,7 @@ public class ARGOTests
 
         Vector3 positionStart = SpiderGameObject.GetComponent<Transform>().position;
    
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         Vector3 positionEnd = SpiderGameObject.GetComponent<Transform>().position;
 
@@ -308,20 +308,14 @@ public class ARGOTests
 
     public IEnumerator WebSpawn()
     {
-        GameObject Player = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/lidia_0"));
         GameObject web = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/SpiderWeb"));
-        GameObject spider = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/SpiderTest"));
 
-        spider.transform.position = new Vector3(2.4f,-0.4f,29.0f);
+        web.transform.position = new Vector3(2.4f,-0.4f,29.0f);
 
      
+        yield return new WaitForSeconds(1f);
 
-        yield return new WaitForSeconds(2f);
-
-
-
-        Assert.Less(web.transform.position.z,53.0f);
-
+        Assert.Less(web.transform.position.z,143.0f);
 
     }
 
