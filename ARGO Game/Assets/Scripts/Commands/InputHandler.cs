@@ -6,7 +6,7 @@ using Mirror;
 public class InputHandler : NetworkBehaviour
 {
     public Unit _unit;
-    private ICommand _bA, _bD, _bS, _bSpace; // Our buttons A, D, S, Space so we can link the button to any command at runtime
+    private ICommand _bLeft, _bRight, _bSlide, _bSpace; // Our buttons A, D, S, Space so we can link the button to any command at runtime
     public static List<ICommand> _oldCommands = new List<ICommand>(); // If we store commands in a list we can backtrack through commands
 
     // For mobile
@@ -20,9 +20,9 @@ public class InputHandler : NetworkBehaviour
     private void Awake()
     {
         //Bind keys to commands
-        _bA = new CommandMoveLeft();
-        _bD = new CommandMoveRight();
-        _bS = new CommandSlide();
+        _bLeft = new CommandMoveLeft();
+        _bRight = new CommandMoveRight();
+        _bSlide = new CommandSlide();
         _bSpace = new CommandJump();
 
         _unit = GetComponent<Unit>();
@@ -39,6 +39,8 @@ public class InputHandler : NetworkBehaviour
         if (!isOwned) return;
        HandleInput();
     }
+
+
     public void HandleInput()
     {
         if (!onPC)
@@ -52,19 +54,19 @@ public class InputHandler : NetworkBehaviour
             if (_fingerDown && Input.touches[0].position.x <= _startPos.x - _pixelDistToDetect)
             {
                 _fingerDown = false;
-                _bA.Execute(_unit, _bA);
+                _bLeft.Execute(_unit, _bLeft);
             }
 
             if (_fingerDown && Input.touches[0].position.x >= _startPos.x + _pixelDistToDetect)
             {
                 _fingerDown = false;
-                _bD.Execute(_unit, _bD);
+                _bRight.Execute(_unit, _bRight);
             }
 
             if (_fingerDown && Input.touches[0].position.y <= _startPos.y - _pixelDistToDetect)
             {
                 _fingerDown = false;
-                _bS.Execute(_unit, _bS);
+                _bSlide.Execute(_unit, _bSlide);
             }
 
             if (_fingerDown && Input.touches[0].position.y >= _startPos.y + _pixelDistToDetect)
@@ -93,19 +95,19 @@ public class InputHandler : NetworkBehaviour
                 else if (Input.mousePosition.y <= _startPos.y - _pixelDistToDetect)
                 {
                     _fingerDown = false;
-                    _bS.Execute(_unit, _bSpace);
+                    _bSlide.Execute(_unit, _bSpace);
                 }
 
                 else if (Input.mousePosition.x >= _startPos.x + _pixelDistToDetect)
                 {
                     _fingerDown = false;
-                    _bD.Execute(_unit, _bSpace);
+                    _bRight.Execute(_unit, _bSpace);
                 }
 
                 else if (Input.mousePosition.x <= _startPos.x - _pixelDistToDetect)
                 {
                     _fingerDown = false;
-                    _bA.Execute(_unit, _bSpace);
+                    _bLeft.Execute(_unit, _bSpace);
                 }
             }
 
