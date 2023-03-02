@@ -16,6 +16,7 @@ public class gameManager : MonoBehaviour
     private int maxHealth;
     public bool isShieldActive = false;
 
+
     private void Start()
     {
         if (healthbar != null)
@@ -29,6 +30,7 @@ public class gameManager : MonoBehaviour
         {
             scoreText.SetText("score: " + score.ToString());
         }
+
     }
     private void Update()
     {
@@ -37,6 +39,7 @@ public class gameManager : MonoBehaviour
         {
             SceneManager.LoadScene("DeathScene");
         }
+
     }
 
     public void addScore()

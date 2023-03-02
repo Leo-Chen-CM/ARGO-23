@@ -33,6 +33,7 @@ public class InputHandler : NetworkBehaviour
         FindObjectOfType<gameManager>().Reset();
     }
 
+
         [Client]
     private void Update()
     {
