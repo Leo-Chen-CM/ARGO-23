@@ -60,10 +60,14 @@ MonoBehaviour:
   playerPrefab: {fileID: 2202475860112787710, guid: d717189a18aaf704aa48485213ad0b1e,
     type: 3}
   autoCreatePlayer: 1
-  playerSpawnMethod: 1
+  playerSpawnMethod: 0
   spawnPrefabs:
-  - {fileID: 8628161808916622343, guid: cf3448c9ee9c32645a99956307d02521, type: 3}
-  - {fileID: 2379754799514549240, guid: 71d8e1bf4a7c7bd468a0770dec2beff4, type: 3}
+  - {fileID: 5585500744148425663, guid: 14766ff3801c628489f1632463ff0516, type: 3}
+  - {fileID: 5520275771620367813, guid: 63eb7c5faf7a24c4ea15acc7c0d0b485, type: 3}
+  - {fileID: 2518558820168100405, guid: 7a0c5b09d0c383848b9893dd45cab98a, type: 3}
+  - {fileID: 4569176629462503428, guid: a3067b36d7fedda48a45c72a4689476f, type: 3}
+  - {fileID: 4656334982861650121, guid: 16b4f74adfcbe274db527b96f49f9521, type: 3}
+  - {fileID: 5187013119465856403, guid: 1c990b814767ff840beaf485bb795846, type: 3}
   timeInterpolationGui: 0
 --- !u!114 &3576595991261007845
 MonoBehaviour:
