@@ -66,12 +66,14 @@ using UnityEngine.SceneManagement;
         }
         public void increaseHp()
         {
-           m_player.GetComponent<SpriteRenderer>().material.color = m_originalColor;
+            //m_player.GetComponent<SpriteRenderer>().material.color = m_originalColor;
+            AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Shield);
+            Debug.Log("Before update: "+ healthbar.value);
             if (healthbar != null)
             {
-                health = maxHealth;
-                healthbar.value = health;
-            
+                //health++;
+                healthbar.value = 100;
+            Debug.Log("After update: " + healthbar.value);
             }
         }
 

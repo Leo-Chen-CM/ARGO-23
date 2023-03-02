@@ -51,7 +51,7 @@ public class Spawner : NetworkBehaviour
             speed = FindObjectOfType<gameManager>().getSpeed();
             obstacleTime = 1.0f / speed;
             coinTime = .2f / speed;
-            pickUpTime = 10.0f / speed;
+            pickUpTime = 3.0f / speed;
         }
 
         StartCoroutine(spawnObstacles());
@@ -89,7 +89,7 @@ public class Spawner : NetworkBehaviour
             if(getRandomPickUp == 1) newPickup.GetComponent<shielScript>().speed = speed;
 
             NetworkServer.Spawn(newPickup);
-            
+
             yield return new WaitForSeconds(pickUpTime);
         }
     }

@@ -8,6 +8,11 @@ using Mirror.Examples.MultipleMatch;
 
 public class MenuSwitcher : MonoBehaviour
 {
+    private void Start()
+    {
+        AudioManager.Instance().PlayMusic(AudioManager.Music.Game);
+    }
+
     public void LoadMultiplayerMenu()
     {
         SceneManager.LoadScene("MultiplayerMenu");
