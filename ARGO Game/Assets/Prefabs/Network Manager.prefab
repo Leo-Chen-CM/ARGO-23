@@ -60,9 +60,13 @@ MonoBehaviour:
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 5585500744148425663, guid: 14766ff3801c628489f1632463ff0516, type: 3}
+  - {fileID: 5520275771620367813, guid: 63eb7c5faf7a24c4ea15acc7c0d0b485, type: 3}
+  - {fileID: 4656334982861650121, guid: 16b4f74adfcbe274db527b96f49f9521, type: 3}
+  - {fileID: 4510862483603238532, guid: 522b165f628ee7546971c2190044b89c, type: 3}
   timeInterpolationGui: 0
-  showRoomGUI: 1
+  showRoomGUI: 0
   minPlayers: 1
   roomPlayerPrefab: {fileID: -3629742772664830186, guid: 044f50f5fdab51e45b8ab0851789aa79,
     type: 3}
