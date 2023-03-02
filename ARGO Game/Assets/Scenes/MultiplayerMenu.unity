@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33655202, g: 0.8161745, b: 0.9302482, a: 1}
+  m_IndirectSpecularColor: {r: 0.33998796, g: 0.8203187, b: 0.9297558, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -663,6 +663,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3883185451686231135, guid: 6062b09b880b2cc43adef7151c965532,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883185451686231135, guid: 6062b09b880b2cc43adef7151c965532,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5585500744148425663, guid: 14766ff3801c628489f1632463ff0516,
+        type: 3}
+    - target: {fileID: 3883185451686231135, guid: 6062b09b880b2cc43adef7151c965532,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 5520275771620367813, guid: 63eb7c5faf7a24c4ea15acc7c0d0b485,
+        type: 3}
+    - target: {fileID: 3883185451686231135, guid: 6062b09b880b2cc43adef7151c965532,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 4656334982861650121, guid: 16b4f74adfcbe274db527b96f49f9521,
+        type: 3}
+    - target: {fileID: 3883185451686231135, guid: 6062b09b880b2cc43adef7151c965532,
+        type: 3}
+      propertyPath: spawnPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 4510862483603238532, guid: 522b165f628ee7546971c2190044b89c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6062b09b880b2cc43adef7151c965532, type: 3}
 --- !u!114 &188752848 stripped
