@@ -32,6 +32,7 @@ public class obstacleObject : Obstacle
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Rat);
             gm.gameObject.GetComponent<gameManager>().reduceHealth();
             player.gameObject.GetComponent<Unit>().poisioned = true;
         }
