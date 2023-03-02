@@ -1,22 +1,19 @@
+using Codice.CM.Common;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiderScript : Obstacle
+public class BatScript : Obstacle
 {
-
     public float speed;
-    public GameObject SpidersWeb;
-    public GameObject spawner;
-    public GameObject gm;  
-    Vector3 webPosition;
-  
-   public  int waittime = 4;
-  
+    public GameObject gm;
+    public Vector3 offset;
+
     private void Start()
     {
-        webPosition = new Vector3(0f, 0.797f, -5.878f);
+        transform.position += offset;
     }
+
     private void FixedUpdate()
     {
         Movement();
@@ -34,22 +31,13 @@ public class SpiderScript : Obstacle
     }
     public override void Interaction()
     {
-        // spawn web
+        Debug.Log("interacted with obstacle");
     }
-  
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-           
-           
-            GameObject newWeb = Instantiate(SpidersWeb, webPosition, Quaternion.identity);
-            Destroy(newWeb,waittime);
             gm.gameObject.GetComponent<gameManager>().reduceHealth();
-         
-          
         }
     }
-
-   
 }
