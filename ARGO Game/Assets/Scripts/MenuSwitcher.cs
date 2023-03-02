@@ -29,7 +29,12 @@ public class MenuSwitcher : MonoBehaviour
         SceneManager.LoadScene("Settings");
     }
 
-    
+    public void Loaddeath()
+    {
+        SceneManager.LoadScene("DeathScene");
+    }
+
+
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
