@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -27,6 +28,14 @@ public class gameManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.SetText("score: " + score.ToString());
+        }
+    }
+    private void Update()
+    {
+      
+        if(health<=0)
+        {
+            SceneManager.LoadScene("DeathScene");
         }
     }
 

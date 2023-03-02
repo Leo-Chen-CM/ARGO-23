@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class CommandSlide : ICommand
 {
-    bool _sliding = false;
     public void Execute(Unit t_unit, ICommand t_com)
     {
         Move(t_unit);
@@ -13,16 +12,16 @@ public class CommandSlide : ICommand
 
     public void Move(Unit _unit)
     {
-        if (!_sliding)
-        {
-            _unit.transform.localScale = new Vector3(3f, 1f, 1);
-            
-            _sliding = !_sliding;
-        }
-        else if (_sliding)
-        {
-            _unit.transform.localScale = new Vector3(3f, 3f, 1);
-            _sliding = !_sliding;
-        }
+        MonoAbstraction.Instance.StartCoroutine(PleaseSlideForTheLoveOfGod(_unit));
+    }
+
+    private IEnumerator PleaseSlideForTheLoveOfGod(Unit _unit)
+    {
+        _unit.transform.localScale = new Vector3(3f, 1f, 1f);
+
+        yield return new WaitForSeconds(1f);
+        
+        _unit.transform.localScale = new Vector3(3f, 3f, 1f);
+
     }
 }
