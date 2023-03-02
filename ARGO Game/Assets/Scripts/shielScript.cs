@@ -5,9 +5,6 @@ using UnityEngine;
 public class shielScript : Obstacle
 {
     public float speed;
-    public GameObject ShieldField;
-    public Transform PLayerTransform;
-    float activeTime = 5.0f;
     public GameObject gm;
    
 
@@ -36,17 +33,7 @@ public class shielScript : Obstacle
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Vector3 offset = new Vector3( 0.0f,0.55f,0.0f);
-            GameObject newShield = Instantiate(ShieldField, PLayerTransform.position- offset, Quaternion.identity);
-            if(newShield.gameObject.activeInHierarchy==true)
-            {
-                gm.gameObject.GetComponent<gameManager>().isShieldActive= true;
-            }
-            else if(newShield.gameObject.activeInHierarchy==false)
-            {
-                gm.gameObject.GetComponent<gameManager>().isShieldActive = false;
-            }
-            Destroy(newShield, activeTime);
+            gm.gameObject.GetComponent<gameManager>().increaseHp();
         }
     }
 }

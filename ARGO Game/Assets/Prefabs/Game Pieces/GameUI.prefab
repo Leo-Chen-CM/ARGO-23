@@ -413,9 +413,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 7804843692253858504}
   healthbar: {fileID: 328836398468455014}
+  m_player: {fileID: 2202475860112787710, guid: d717189a18aaf704aa48485213ad0b1e,
+    type: 3}
   speed: 0.8
   health: 5
-  isShieldActive: 1
 --- !u!1 &7804843692253858358
 GameObject:
   m_ObjectHideFlags: 0
