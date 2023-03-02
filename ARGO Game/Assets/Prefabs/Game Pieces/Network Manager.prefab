@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3576595991261007851
 Transform:
   m_ObjectHideFlags: 0
@@ -68,6 +68,7 @@ MonoBehaviour:
   - {fileID: 4569176629462503428, guid: a3067b36d7fedda48a45c72a4689476f, type: 3}
   - {fileID: 4656334982861650121, guid: 16b4f74adfcbe274db527b96f49f9521, type: 3}
   - {fileID: 5187013119465856403, guid: 1c990b814767ff840beaf485bb795846, type: 3}
+  - {fileID: 1706406299518302266, guid: 97cead1e16a514447b2fbb6b2de38150, type: 3}
   timeInterpolationGui: 0
 --- !u!114 &3576595991261007845
 MonoBehaviour:
