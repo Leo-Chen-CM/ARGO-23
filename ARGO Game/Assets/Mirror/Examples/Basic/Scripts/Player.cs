@@ -139,7 +139,7 @@ namespace Mirror.Examples.Basic
         public override void OnStopLocalPlayer()
         {
             // Disable the main panel for local player
-            CanvasUI.SetActive(false);
+            //CanvasUI.SetActive(false);
         }
 
         /// <summary>
