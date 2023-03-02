@@ -2,21 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LavaPickupScript : Obstacle
+public class HoleScript : Obstacle
 {
     public float speed;
-    public GameObject lavaFloor;
-    float LavaLiveTime = 10.0f;
     public GameObject gm;
-    Vector3 floorVec;
-
 
     private void Start()
     {
-        floorVec = transform.position;
-        floorVec.y = floorVec.y - 1.2f;
-        floorVec.z = floorVec.z - 38;
-        speed = 1;
+        Vector3 pos = transform.position;
+        pos.y = -1.99f;
+        transform.position = pos;
+        transform.rotation = Quaternion.Euler(90, 0, 0);
     }
 
     private void FixedUpdate()
@@ -36,17 +32,13 @@ public class LavaPickupScript : Obstacle
     }
     public override void Interaction()
     {
-
+        Debug.Log("interacted with obstacle");
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
-            GameObject newLavaFloor = Instantiate(lavaFloor, floorVec, Quaternion.identity);
-            Destroy(newLavaFloor, LavaLiveTime);
-
+            gm.gameObject.GetComponent<gameManager>().reduceHealth();
         }
     }
 }
