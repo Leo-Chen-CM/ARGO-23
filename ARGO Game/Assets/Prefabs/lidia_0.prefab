@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 6961854600647223080}
   - component: {fileID: -6551134531518230023}
   - component: {fileID: 5241110572641962569}
-  - component: {fileID: 767131022668713407}
   - component: {fileID: 8127917701421303128}
+  - component: {fileID: -2177645455788467101}
   m_Layer: 10
   m_Name: lidia_0
   m_TagString: Player
@@ -176,6 +176,7 @@ MonoBehaviour:
   syncInterval: 0.1
   _unit: {fileID: 5241110572641962569}
   _offline: 0
+  onPC: 1
 --- !u!114 &5241110572641962569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,37 +196,6 @@ MonoBehaviour:
   poisioned: 1
   _jumpForce: 5
   _rb: {fileID: 6961854600647223080}
---- !u!114 &767131022668713407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2202475860112787710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 6928c227d2b173f419c6f77d8727868c,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &8127917701421303128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +225,34 @@ MonoBehaviour:
   compressRotation: 0
   positionPrecision: 0.01
   scalePrecision: 0.01
+--- !u!114 &-2177645455788467101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2202475860112787710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 2202475860112787697}
+  clientAuthority: 0
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChange: 1
+  bufferResetMultiplier: 5
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
 --- !u!1001 &6967432795336996110
 PrefabInstance:
   m_ObjectHideFlags: 0
