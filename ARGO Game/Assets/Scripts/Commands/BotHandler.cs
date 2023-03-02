@@ -48,7 +48,8 @@ public class BotHandler : MonoBehaviour
     [SerializeField] private LayerMask _obstacleMask;
     [SerializeField] private float _rayDistance = 2.5f;
     Vector3 _direction = Vector3.forward;
-    Ray _ray;
+    Ray _footRay;
+    Ray _headRay;
 
     private void Awake()
     {
@@ -93,8 +94,12 @@ public class BotHandler : MonoBehaviour
         // clamp so we dont go negative with our anchor weight
         _differential = Mathf.Clamp(_differential, 0, .5f);
 
-        // draw and update ray position
-        _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
+        // draw and update ray positions
+        Vector3 pos = transform.position;
+        pos.y *= 2;
+        _headRay = new Ray(pos, transform.TransformDirection(_direction * _rayDistance));
+        pos.y = 0;
+        _footRay = new Ray(pos, transform.TransformDirection(_direction * _rayDistance));
         Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance));
 
         // Meat and bones of decision handling
@@ -133,8 +138,21 @@ public class BotHandler : MonoBehaviour
     /// <param name="t_rayDist">the length of the ray</param>
     public void CollisionHandler(float t_rayDist)
     {
-        if (Physics.Raycast(_ray, out RaycastHit _hit, t_rayDist, _obstacleMask))
+        bool head = Physics.Raycast(_headRay, t_rayDist, _obstacleMask);
+        bool foot = Physics.Raycast(_footRay, t_rayDist, _obstacleMask);
+
+        if (head && foot)
         {
+            _ft.Fuzzification(calculateMove());
+        }
+        else if(head)
+        {
+            // jump is possible
+            _ft.Fuzzification(calculateMove());
+        }
+        else if(foot)
+        {
+            // duck is posssible
             _ft.Fuzzification(calculateMove());
         }
     }
