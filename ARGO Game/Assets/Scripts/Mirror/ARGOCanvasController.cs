@@ -1,13 +1,17 @@
-﻿using System;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Networking.Match;
 using UnityEngine.UI;
+
 
 namespace Mirror.Examples.MultipleMatch
 {
-    public class CanvasController : MonoBehaviour
+    public class ARGOCanvasController : MonoBehaviour
     {
+
         /// <summary>
         /// Match Controllers listen for this to terminate their match and clean up
         /// </summary>
@@ -499,7 +503,7 @@ namespace Mirror.Examples.MultipleMatch
             if (playerMatches.TryGetValue(conn, out matchId))
             {
                 GameObject matchControllerObject = Instantiate(matchControllerPrefab);
-                matchControllerObject.GetComponent<NetworkMatch>().matchId = matchId;
+                //matchControllerObject.GetComponent<NetworkMatch>().matchId = matchId;
                 NetworkServer.Spawn(matchControllerObject);
 
                 MatchController matchController = matchControllerObject.GetComponent<MatchController>();
@@ -509,7 +513,7 @@ namespace Mirror.Examples.MultipleMatch
                     playerConn.Send(new ClientMatchMessage { clientMatchOperation = ClientMatchOperation.Started });
 
                     GameObject player = Instantiate(NetworkManager.singleton.playerPrefab);
-                    player.GetComponent<NetworkMatch>().matchId = matchId;
+                    //player.GetComponent<NetworkMatch>().matchId = matchId;
                     NetworkServer.AddPlayerForConnection(playerConn, player);
 
                     if (matchController.player1 == null)
@@ -680,3 +684,5 @@ namespace Mirror.Examples.MultipleMatch
 
     }
 }
+
+
