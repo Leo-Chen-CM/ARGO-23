@@ -3,9 +3,7 @@
 /// Worked on by: Jack Sinnott
 /// </summary>
 
-using Mirror;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Unit : MonoBehaviour
@@ -17,7 +15,7 @@ public class Unit : MonoBehaviour
     Vector3 _direction = Vector3.down;
     Ray _ray;
     Color _color;
-    public float _jumpForce = 20;
+    public float _jumpForce = 5;
     private float waitTime = 1.5f;
     public Rigidbody _rb;
 
@@ -36,16 +34,10 @@ public class Unit : MonoBehaviour
         _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
         Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance));
 
-        
-
     }
     private void FixedUpdate()
     {
-        if(poisioned==true)
-        {
-            StartCoroutine(poisonedChecker());
-        }
-           
+        StartCoroutine(poisonedChecker());
     }
     /// <summary>
     /// Draws a raycast from the bottom of the player downwards to check for ground collisions
@@ -89,7 +81,8 @@ public class Unit : MonoBehaviour
     }
     private IEnumerator poisonedChecker()
     {
-       
+        while (poisioned == true )
+        {
            
            _color.g += 0.005f;
            gameObject.GetComponent<SpriteRenderer>().material.color = _color;
@@ -98,7 +91,7 @@ public class Unit : MonoBehaviour
             _color.g = 0;
             poisioned = false;
 
-        
+        }
     }
 
 
