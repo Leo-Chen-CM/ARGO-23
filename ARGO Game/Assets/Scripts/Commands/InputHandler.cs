@@ -120,14 +120,4 @@ public class InputHandler : NetworkBehaviour
 
     }
 
-    public void OnJump()
-    {
-        _bSpace.Execute(_unit, _bSpace);
-        Debug.Log("You tried to jump");
-    }
-
-    public void OnTurn()
-    {
-        Debug.Log("You tried to move left/right");
-    }
 }
