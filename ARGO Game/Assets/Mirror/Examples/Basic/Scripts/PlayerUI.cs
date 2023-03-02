@@ -5,12 +5,15 @@ namespace Mirror.Examples.Basic
 {
     public class PlayerUI : MonoBehaviour
     {
+
+
         [Header("Player Components")]
         public Image image;
+        public Player _player;
+        public Button _readyUpButton;
 
         [Header("Child Text Objects")]
         public Text playerNameText;
-        public Text playerDataText;
 
         // Sets a highlight color for the local player
         public void SetLocalPlayer()
@@ -31,11 +34,12 @@ namespace Mirror.Examples.Basic
             playerNameText.color = newPlayerColor;
         }
 
-        // This updates from Player::UpdateData via InvokeRepeating on server
-        public void OnPlayerDataChanged(ushort newPlayerData)
+        public void TogglePlayerReadyUp()
         {
-            // Show the data in the UI
-            playerDataText.text = string.Format("Data: {0:000}", newPlayerData);
+            _player.GetComponent<NetworkRoomPlayer>().CmdChangeReadyState(true);
+            _player.enabled= false;
+            _readyUpButton.gameObject.SetActive(false);
         }
+
     }
 }

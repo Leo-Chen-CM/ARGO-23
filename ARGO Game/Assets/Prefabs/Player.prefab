@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8127917701421303128}
   - component: {fileID: -2177645455788467101}
   m_Layer: 10
-  m_Name: lidia_0
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
