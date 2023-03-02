@@ -110,7 +110,6 @@ public class Spawner : NetworkBehaviour
 
 
             newPickup.GetComponent<CollectableObject>().speed = speed;
-            Debug.Log("Coins to be spawned: " + maxCoinsToSpawn + "\nCurrentNumberofspawnedCoins: " + numberOfCoinSpawned);
 
             NetworkServer.Spawn(newPickup);
             numberOfCoinSpawned += 1;
