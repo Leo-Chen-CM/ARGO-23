@@ -9,6 +9,7 @@ TagManager:
   - particle
   - spider
   - shield
+  - Bot
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Ground
   - Obstacle
   - Pickup
-  - 
+  - Lava
   - 
   - 
   - 
