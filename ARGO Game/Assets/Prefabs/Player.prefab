@@ -193,7 +193,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _rayDistance: 1
-  poisioned: 1
+  poisioned: 0
   _jumpForce: 5
   _rb: {fileID: 6961854600647223080}
 --- !u!114 &8127917701421303128

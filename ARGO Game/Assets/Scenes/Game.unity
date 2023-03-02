@@ -432,6 +432,11 @@ PrefabInstance:
       propertyPath: sceneId
       value: 3095568234
       objectReference: {fileID: 0}
+    - target: {fileID: 1704315658540507876, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
+        type: 3}
+      propertyPath: sceneId
+      value: 3423670765
+      objectReference: {fileID: 0}
     - target: {fileID: 4498798411418526724, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -441,6 +446,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438132349656530143, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
+        type: 3}
+      propertyPath: sceneId
+      value: 2914458469
       objectReference: {fileID: 0}
     - target: {fileID: 7804843690267304042, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
         type: 3}
@@ -556,6 +566,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675004900913476147, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
+        type: 3}
+      propertyPath: sceneId
+      value: 702566155
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024239185620385622, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
+        type: 3}
+      propertyPath: sceneId
+      value: 1420705319
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a45936f2bc3dfc94fbbac1c1046ca11c, type: 3}

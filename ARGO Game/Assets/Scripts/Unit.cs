@@ -17,7 +17,7 @@ public class Unit : MonoBehaviour
     Vector3 _direction = Vector3.down;
     Ray _ray;
     Color _color;
-    public float _jumpForce = 5;
+    public float _jumpForce = 20;
     private float waitTime = 1.5f;
     public Rigidbody _rb;
 
@@ -41,7 +41,11 @@ public class Unit : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        StartCoroutine(poisonedChecker());
+        if(poisioned==true)
+        {
+            StartCoroutine(poisonedChecker());
+        }
+           
     }
     /// <summary>
     /// Draws a raycast from the bottom of the player downwards to check for ground collisions
@@ -85,8 +89,7 @@ public class Unit : MonoBehaviour
     }
     private IEnumerator poisonedChecker()
     {
-        while (poisioned == true )
-        {
+       
            
            _color.g += 0.005f;
            gameObject.GetComponent<SpriteRenderer>().material.color = _color;
@@ -95,7 +98,7 @@ public class Unit : MonoBehaviour
             _color.g = 0;
             poisioned = false;
 
-        }
+        
     }
 
 
