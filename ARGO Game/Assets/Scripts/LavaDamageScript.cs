@@ -7,12 +7,15 @@ public class LavaDamageScript : MonoBehaviour
     /// reference to the game manager
     public GameObject gm;
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("hitting the lava on the floor");
             gm.gameObject.GetComponent<gameManager>().reduceHealth();
-           
+
         }
     }
 }
+ 

@@ -44,6 +44,7 @@ public class SpiderScript : Obstacle
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Spider);
             GameObject newWeb = Instantiate(SpidersWeb, webPosition, Quaternion.identity);
             Destroy(newWeb,waittime);
             gm.gameObject.GetComponent<gameManager>().reduceHealth();
