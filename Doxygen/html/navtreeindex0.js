@@ -1,18 +1,5 @@
 var NAVTREEINDEX0 =
 {
-"_audio_manager_8cs_source.html":[1,0,0],
-"_bat_script_8cs_source.html":[1,0,1],
-"_collectable_object_8cs_source.html":[1,0,2],
-"_hole_script_8cs_source.html":[1,0,4],
-"_lava_damage_script_8cs_source.html":[1,0,5],
-"_lava_pickup_script_8cs_source.html":[1,0,6],
-"_menu_switcher_8cs_source.html":[1,0,7],
-"_mono_abstraction_8cs_source.html":[1,0,8],
-"_obstacle_8cs_source.html":[1,0,9],
-"_scroller_8cs_source.html":[1,0,11],
-"_spawner_8cs_source.html":[1,0,13],
-"_spider_script_8cs_source.html":[1,0,14],
-"_unit_8cs_source.html":[1,0,15],
 "annotated.html":[0,0],
 "class_audio_manager.html":[0,0,0],
 "class_audio_manager.html#a1086249053d60ee0639d20fbdc7ff8fd":[0,0,0,1],
@@ -92,16 +79,12 @@ var NAVTREEINDEX0 =
 "classshiel_script.html#a77e6f531ca9b1ec430bb8e952b44b7c9":[0,0,12,2],
 "classshiel_script.html#a9c05b4bf0a6b4350fbcf518058cd16cc":[0,0,12,1],
 "classshiel_script.html#ac256bf343be1d54723daf42c094950c8":[0,0,12,0],
-"files.html":[1,0],
 "functions.html":[0,3,0],
 "functions_enum.html":[0,3,3],
 "functions_func.html":[0,3,1],
 "functions_prop.html":[0,3,4],
 "functions_vars.html":[0,3,2],
-"game_manager_8cs_source.html":[1,0,3],
 "hierarchy.html":[0,2],
 "index.html":[],
-"obstacle_object_8cs_source.html":[1,0,10],
-"pages.html":[],
-"shiel_script_8cs_source.html":[1,0,12]
+"pages.html":[]
 };
