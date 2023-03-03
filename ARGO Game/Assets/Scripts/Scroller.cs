@@ -8,6 +8,7 @@ public class Scroller : MonoBehaviour
     private float offset;
 
     private Renderer[] renderers;
+    /// the objects whos texture will be scrolled
     public GameObject[] toScroll;
     // Start is called before the first frame update
     void Start()

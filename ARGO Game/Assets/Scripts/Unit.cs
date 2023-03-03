@@ -8,18 +8,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Unit Class for Players and AI
+/// </summary>
 public class Unit : MonoBehaviour
 {
-    // For our ground raycast check
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private float _rayDistance = 5f;
-    public bool poisioned = false;
+    /// whether the unit is currently poisoned
+    public bool poisioned = false; 
     Vector3 _direction = Vector3.down;
     Ray _ray;
     Color _color;
-    public float _jumpForce = 5;
+    /// how strong the units jumps are
+    public float _jumpForce = 20; 
     private float waitTime = 1.5f;
-    public Rigidbody _rb;
+    /// the rigidbody of the unit
+    public Rigidbody _rb; 
 
     private gameManager gm;
 
@@ -27,6 +33,7 @@ public class Unit : MonoBehaviour
     {
         gm = FindObjectOfType<gameManager>();
         _rb = GetComponent<Rigidbody>();
+        poisioned= false;
         _color = GetComponent<SpriteRenderer>().material.color;
     }
 
@@ -41,7 +48,11 @@ public class Unit : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        StartCoroutine(poisonedChecker());
+        if(poisioned==true)
+        {
+            StartCoroutine(poisonedChecker());
+        }
+           
     }
     /// <summary>
     /// Draws a raycast from the bottom of the player downwards to check for ground collisions
@@ -60,18 +71,21 @@ public class Unit : MonoBehaviour
             return false;
         }
     }
-
+    /// <summary>
+    /// returns the jump force value
+    /// </summary>
+    /// <returns></returns>
     public float GetJumpForce()
     {
         return _jumpForce;
     }
 
-    // currently triggers for all players not just user - action required
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Pickup")
         {
             gm.addScore();
+            AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Coin);
             Destroy(other.gameObject);
         }
         else if (other.tag == "Obstacle")
@@ -84,18 +98,14 @@ public class Unit : MonoBehaviour
         }
     }
     private IEnumerator poisonedChecker()
-    {
-        while (poisioned == true )
-        {
-           
-           _color.g += 0.005f;
-           gameObject.GetComponent<SpriteRenderer>().material.color = _color;
-           
-           yield return new WaitForSeconds(waitTime);
-            _color.g = 0;
-            poisioned = false;
-
-        }
+    {    
+        AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Poison);
+        _color.g += 0.005f;
+        gameObject.GetComponent<SpriteRenderer>().material.color = _color;
+        
+        yield return new WaitForSeconds(waitTime);
+        _color.g = 0;
+        poisioned = false;
     }
 
 }

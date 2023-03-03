@@ -362,6 +362,7 @@ namespace Mirror.Examples.MultipleMatch
                     }
                 case ServerMatchOperation.Create:
                     {
+                        Debug.Log("hit");
                         OnServerCreateMatch(conn);
                         break;
                     }
@@ -377,6 +378,8 @@ namespace Mirror.Examples.MultipleMatch
                     }
                 case ServerMatchOperation.Join:
                     {
+
+                        Debug.Log("hit");
                         OnServerJoinMatch(conn, msg.matchId);
                         break;
                     }
@@ -588,6 +591,7 @@ namespace Mirror.Examples.MultipleMatch
                     }
                 case ClientMatchOperation.Created:
                     {
+                        Debug.Log("hit");
                         localPlayerMatch = msg.matchId;
                         ShowRoomView();
                         roomGUI.RefreshRoomPlayers(msg.playerInfos);

@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class shielScript : Obstacle
 {
+    /// how fast the objects move
     public float speed;
-    public GameObject ShieldField;
-    public Transform PLayerTransform;
-    float activeTime = 5.0f;
+    /// reference to the game manager
     public GameObject gm;
-   
 
     private void FixedUpdate()
     {
@@ -17,6 +15,9 @@ public class shielScript : Obstacle
         
     }
 
+    /// <summary>
+    /// This function moves the shield towards the player and deletes it after it goes offscreen
+    /// </summary>
     public override void Movement()
     {
         Vector3 pos = transform.position;
@@ -28,25 +29,12 @@ public class shielScript : Obstacle
         transform.position = pos;
        
     }
-    public override void Interaction()
-    {
 
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Vector3 offset = new Vector3( 0.0f,0.55f,0.0f);
-            GameObject newShield = Instantiate(ShieldField, PLayerTransform.position- offset, Quaternion.identity);
-            if(newShield.gameObject.activeInHierarchy==true)
-            {
-                gm.gameObject.GetComponent<gameManager>().isShieldActive= true;
-            }
-            else if(newShield.gameObject.activeInHierarchy==false)
-            {
-                gm.gameObject.GetComponent<gameManager>().isShieldActive = false;
-            }
-            Destroy(newShield, activeTime);
+            gm.gameObject.GetComponent<gameManager>().increaseHp();
         }
     }
 }
