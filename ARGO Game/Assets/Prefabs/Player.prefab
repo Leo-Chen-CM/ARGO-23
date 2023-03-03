@@ -267,13 +267,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad89d21800d8c94428230276e99fae71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _diff: 2
   _currentLane: 4
   _unit: {fileID: 5241110572641962569}
   _differential: 0.5
   _obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  _rayDistance: 2.5
+  _unitRayDistance: 7.5
+  _laneRayDistance: 0
 --- !u!114 &3117374769982222098
 MonoBehaviour:
   m_ObjectHideFlags: 0

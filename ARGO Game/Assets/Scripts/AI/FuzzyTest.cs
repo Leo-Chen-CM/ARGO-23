@@ -17,6 +17,7 @@ public class FuzzyTest : MonoBehaviour
     public AnimationCurve m_dontMove;
     public AnimationCurve m_moveRight;
 
+
     // reference so we can pass data to our HandleInput function
     BotHandler _aiUnit;
 
