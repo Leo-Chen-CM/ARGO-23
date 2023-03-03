@@ -3,7 +3,6 @@
  * Worked on by: Jack Sinnott
  */
 
-using log4net.Util;
 using System.Collections.Generic;
 using UnityEngine;
 
