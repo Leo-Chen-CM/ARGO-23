@@ -22,7 +22,6 @@ public class gameManager : MonoBehaviour
     private int maxHealth;
 
 
-
     private void Start()
     {
         if (healthbar != null)
@@ -93,7 +92,7 @@ public class gameManager : MonoBehaviour
             AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Shield);
             health = maxHealth;
             healthbar.value = health;
-            
+          
         }
     }
 
