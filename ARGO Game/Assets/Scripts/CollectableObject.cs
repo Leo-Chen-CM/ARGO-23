@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollectableObject : Obstacle
 {
+    /// the speed at which it moves towards player
     public float speed;
 
     private void FixedUpdate()
@@ -12,6 +13,9 @@ public class CollectableObject : Obstacle
         Movement();
     }
 
+    /// <summary>
+    /// This function moves the Coin towards the player and deletes it after it goes offscreen
+    /// </summary>
     public override void Movement()
     {
         Vector3 pos = transform.position;
@@ -21,10 +25,5 @@ public class CollectableObject : Obstacle
             Destroy(gameObject);
         }
         transform.position = pos;
-    }
-
-    public override void Interaction()
-    {
-        Debug.Log("interacted with collectable");
     }
 }
