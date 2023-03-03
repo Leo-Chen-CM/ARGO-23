@@ -17,6 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: aa86dc67d1e2fbc47a9904a0994d759f
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 0923fce0a9178c741999ba8c64de0851
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerMenu.unity
+    guid: 105db78970a49ca4e8b841876111ad9f
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: b0c36dcb1f721e148b4eea3a43d62207
+  - enabled: 1
+    path: Assets/Scenes/BlankOffline.unity
+    guid: a7c8bcbcbf30f5d44ad3b44a3d1c33fb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0b6ddb2e84efa5049826ce21fcb2da8e,
       type: 2}

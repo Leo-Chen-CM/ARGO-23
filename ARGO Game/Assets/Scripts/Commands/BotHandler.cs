@@ -3,6 +3,7 @@
  * Worked on by: Jack Sinnott
  */
 
+using log4net.Util;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,17 +33,16 @@ public class BotHandler : MonoBehaviour
     FuzzyTest _ft;
 
     // Enum instantiation
-    Difficulty _diff;
+    public Difficulty _diff;
     public Lane _currentLane;
 
     // Command pattern links
     public Unit _unit;
     private ICommand _moveLeft, _moveRight, _jump, _slide; // Our buttons A, D, S, Space so we can link the button to any command at runtime
-    public static List<ICommand> _oldCommands = new List<ICommand>(); // If we store commands in a list we can backtrack through commands
 
-    
 
-    // For our ground raycast check
+
+    // 
     [SerializeField] private LayerMask _obstacleMask;
     [SerializeField] private LayerMask _laneMasks;
     [SerializeField] private float _unitRayDistance = 5f;
@@ -50,6 +50,13 @@ public class BotHandler : MonoBehaviour
     Vector3 _direction = Vector3.forward;
     Ray _footRay;
     Ray _headRay;
+    Ray _leftRay;
+    Ray _middleRay;
+    Ray _rightRay;
+
+    bool _leftactive = false;
+    bool _middleActive = false;
+    bool _rightActive = false;
 
     bool head;
     bool foot;
@@ -77,7 +84,6 @@ public class BotHandler : MonoBehaviour
     private void Update()
     {
 
-        
         // Update our lane so we know what movements are not allowed versus what is acceptable
         UpdateLane();
 
@@ -85,7 +91,7 @@ public class BotHandler : MonoBehaviour
         HandleRaycasting();
 
         // Meat and bones of decision handling
-        CollisionHandler(_rayDistance);
+        CollisionHandler(_unitRayDistance);
 
     }
 
@@ -107,11 +113,6 @@ public class BotHandler : MonoBehaviour
             _moveRight.Execute(_unit, _moveRight);
         }
 
-        // _slide.Execute(_unit, _slide);
-
-
-        //_jump.Execute(_unit, _jump);
-
     }
 
     /// <summary>
@@ -120,7 +121,6 @@ public class BotHandler : MonoBehaviour
     /// <param name="t_rayDist">the length of the ray</param>
     public void CollisionHandler(float t_rayDist)
     {
-
         head = Physics.Raycast(_headRay, t_rayDist, _obstacleMask);
         foot = Physics.Raycast(_footRay, t_rayDist, _obstacleMask);
         _leftRayTriggered = Physics.Raycast(_leftRay, t_rayDist, _laneMasks);
@@ -131,18 +131,17 @@ public class BotHandler : MonoBehaviour
         {
             _ft.Fuzzification(_leftRayTriggered, _middleRayTriggered, _rightRayTriggered);
         }
-        else if(head)
+        else if (head)
         {
             // jump is possible
-            _ft.Fuzzification(calculateMove());
+            Jump();
         }
-        else if(foot)
+        else if (foot)
         {
             // duck is posssible
-            _ft.Fuzzification(calculateMove());
+            Slide();
         }
     }
-
 
     private void Jump()
     {
@@ -213,7 +212,7 @@ public class BotHandler : MonoBehaviour
                 break;
         }
 
-        
+
 
         if (_leftactive)
         {
@@ -221,12 +220,12 @@ public class BotHandler : MonoBehaviour
             Debug.DrawRay(new Vector3(-3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
         }
 
-        if(_middleActive)
+        if (_middleActive)
         {
             _middleRay = new Ray(new Vector3(0, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
             Debug.DrawRay(new Vector3(0, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
         }
-        if(_rightActive)
+        if (_rightActive)
         {
             _rightRay = new Ray(new Vector3(3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
             Debug.DrawRay(new Vector3(3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
