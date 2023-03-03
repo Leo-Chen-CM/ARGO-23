@@ -256,13 +256,13 @@ public class BotHandler : MonoBehaviour
         switch (_diff)
         {
             case Difficulty.EASY:
-                _laneRayDistance = 7.5f;
+                _laneRayDistance = 10f;
                 break;
             case Difficulty.MODERATE:
-                _laneRayDistance = 12.5f;
+                _laneRayDistance = 20f;
                 break;
             case Difficulty.HARD:
-                _laneRayDistance = 15f;
+                _laneRayDistance = 30f;
                 break;
             default:
                 break;
@@ -297,10 +297,11 @@ public class BotHandler : MonoBehaviour
             _leftRay = new Ray(new Vector3(-3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
             Debug.DrawRay(new Vector3(-3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
         }
+
         if(_middleActive)
         {
             _middleRay = new Ray(new Vector3(0, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
-            Debug.DrawRay(new Vector3(3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
+            Debug.DrawRay(new Vector3(0, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
         }
         if(_rightActive)
         {
