@@ -35,6 +35,7 @@ public class gameManager : MonoBehaviour
         {
             scoreText.SetText("score: " + score.ToString());
         }
+
     }
     private void Update()
     {
@@ -46,6 +47,7 @@ public class gameManager : MonoBehaviour
             Destroy(FindObjectOfType<Mirror.Examples.Basic.NewNetworkRoomManager>().gameObject);
             SceneManager.LoadScene("DeathScene");
         }
+
     }
 
     /// <summary>
@@ -90,7 +92,7 @@ public class gameManager : MonoBehaviour
             AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Shield);
             health = maxHealth;
             healthbar.value = health;
-            
+          
         }
     }
 

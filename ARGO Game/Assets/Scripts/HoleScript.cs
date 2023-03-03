@@ -35,7 +35,10 @@ public class HoleScript : Obstacle
         }
         transform.position = pos;
     }
-
+    public void Interaction()
+    {
+        Debug.Log("interacted with obstacle");
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
