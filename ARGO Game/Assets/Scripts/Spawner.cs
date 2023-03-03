@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Spawner : NetworkBehaviour
 {
+    /// the left lane spawn location
     public Transform leftSpawn;
+    /// the mid lane spawn location
     public Transform midSpawn;
+    /// the right lane spawn location
     public Transform rightSpawn;
 
-    public Transform upleftSpawn;
-    public Transform upmidSpawn;
-    public Transform uprightSpawn;
     private float coinTime;
     private float obstacleTime;
     private float pickUpTime;
@@ -25,22 +25,25 @@ public class Spawner : NetworkBehaviour
     int getLaneToSpawn;
     int maxCoinsToSpawn = 0;
 
+    /// the obstacles that can spawn
     [SerializeField] public GameObject[] obstacles;
+    /// the pickups that can spawn
     [SerializeField] public GameObject[] pickups;
+    /// the coin object
     [SerializeField] public GameObject Coin;
     
     private Vector3[] positions;
 
+    /// <summary>
+    /// this is called when the mirror server starts
+    /// </summary>
     [Server]
     public override void OnStartServer()
     {
-        positions = new Vector3[6];
+        positions = new Vector3[3];
         positions[0] = leftSpawn.position;
         positions[1] = midSpawn.position;
         positions[2] = rightSpawn.position;
-        positions[3] = upleftSpawn.position;
-        positions[4] = upmidSpawn.position;
-        positions[5] = uprightSpawn.position;
 
         offset = obstacles[0].GetComponent<Renderer>().bounds.size;
         offset.x = 0;

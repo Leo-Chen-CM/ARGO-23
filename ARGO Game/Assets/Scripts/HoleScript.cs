@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class HoleScript : Obstacle
 {
+    /// the speed at which it moves towards player
     public float speed;
+    /// reference to the game manager
     public GameObject gm;
 
     private void Start()
@@ -20,6 +22,9 @@ public class HoleScript : Obstacle
         Movement();
     }
 
+    /// <summary>
+    /// This function moves the Hole towards the player and deletes it after it goes offscreen
+    /// </summary>
     public override void Movement()
     {
         Vector3 pos = transform.position;
@@ -30,10 +35,7 @@ public class HoleScript : Obstacle
         }
         transform.position = pos;
     }
-    public override void Interaction()
-    {
-        Debug.Log("interacted with obstacle");
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
