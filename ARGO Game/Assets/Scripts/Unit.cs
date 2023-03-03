@@ -3,9 +3,7 @@
 /// Worked on by: Jack Sinnott
 /// </summary>
 
-using Mirror;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -43,16 +41,10 @@ public class Unit : MonoBehaviour
         _ray = new Ray(transform.position, transform.TransformDirection(_direction * _rayDistance));
         Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance));
 
-        
-
     }
     private void FixedUpdate()
     {
-        if(poisioned==true)
-        {
-            StartCoroutine(poisonedChecker());
-        }
-           
+        StartCoroutine(poisonedChecker());
     }
     /// <summary>
     /// Draws a raycast from the bottom of the player downwards to check for ground collisions

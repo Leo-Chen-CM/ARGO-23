@@ -40,8 +40,6 @@ public class BotHandler : MonoBehaviour
     public Unit _unit;
     private ICommand _moveLeft, _moveRight, _jump, _slide; // Our buttons A, D, S, Space so we can link the button to any command at runtime
 
-
-
     // 
     [SerializeField] private LayerMask _obstacleMask;
     [SerializeField] private LayerMask _laneMasks;
@@ -83,7 +81,7 @@ public class BotHandler : MonoBehaviour
 
     private void Update()
     {
-
+        
         // Update our lane so we know what movements are not allowed versus what is acceptable
         UpdateLane();
 
@@ -136,7 +134,7 @@ public class BotHandler : MonoBehaviour
             // jump is possible
             Jump();
         }
-        else if (foot)
+        else if(foot)
         {
             // duck is posssible
             Slide();
@@ -211,7 +209,6 @@ public class BotHandler : MonoBehaviour
             default:
                 break;
         }
-
 
 
         if (_leftactive)
