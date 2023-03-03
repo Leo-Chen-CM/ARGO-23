@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LavaDamageScript : MonoBehaviour
 {
+    /// reference to the game manager
     public GameObject gm;
 
     private void OnTriggerEnter(Collider other)

@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class BatScript : Obstacle
 {
+    /// the speed at which the bat moves towards the player
     public float speed;
+    /// reference to the gamemanager
     public GameObject gm;
+    /// the offset off the ground the bat floats
     public Vector3 offset;
 
     private void Start()
@@ -19,6 +22,9 @@ public class BatScript : Obstacle
         Movement();
     }
 
+    /// <summary>
+    /// This function moves the Bat towards the player and deletes it after it goes offscreen
+    /// </summary>
     public override void Movement()
     {
         Vector3 pos = transform.position;
@@ -29,10 +35,7 @@ public class BatScript : Obstacle
         }
         transform.position = pos;
     }
-    public override void Interaction()
-    {
-        Debug.Log("interacted with obstacle");
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

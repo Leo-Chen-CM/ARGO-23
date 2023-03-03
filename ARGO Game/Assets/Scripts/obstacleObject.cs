@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class obstacleObject : Obstacle
 {
-
+    /// the speed at which it travels
     public float speed;
+    /// reference to the game manager
     public GameObject gm;
-    public GameObject player;
 
     private void FixedUpdate()
     {
         Movement();
     }
 
+    /// <summary>
+    /// This function moves the rat towards the player and deletes it after it goes offscreen
+    /// </summary>
     public override void Movement()
     {
         Vector3 pos = transform.position;
@@ -24,16 +27,13 @@ public class obstacleObject : Obstacle
         }
         transform.position = pos;
     }
-    public override void Interaction()
-    {
-        Debug.Log("interacted with obstacle");
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             gm.gameObject.GetComponent<gameManager>().reduceHealth();
-            player.gameObject.GetComponent<Unit>().poisioned = true;
+            other.gameObject.GetComponent<Unit>().poisioned = true;
         }
     }
 
