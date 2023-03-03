@@ -439,6 +439,16 @@ PrefabInstance:
       propertyPath: health
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7804843690267304043, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
+        type: 3}
+      propertyPath: _lavaItemButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804843690267304043, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
+        type: 3}
+      propertyPath: _emptyItemButton
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7804843690267304047, guid: a45936f2bc3dfc94fbbac1c1046ca11c,
         type: 3}
       propertyPath: m_Pivot.x

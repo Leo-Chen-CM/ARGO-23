@@ -16,7 +16,6 @@ public class gameManager : MonoBehaviour
     public int health;
     private int maxHealth;
 
-
     private void Start()
     {
         if (healthbar != null)
@@ -30,10 +29,10 @@ public class gameManager : MonoBehaviour
         {
             scoreText.SetText("score: " + score.ToString());
         }
+
     }
     private void Update()
     {
-
         if (health <= 0)
         {
             FindObjectOfType<Mirror.Examples.Basic.NewNetworkRoomManager>().StopClient();
@@ -41,6 +40,7 @@ public class gameManager : MonoBehaviour
             Destroy(FindObjectOfType<Mirror.Examples.Basic.NewNetworkRoomManager>().gameObject);
             SceneManager.LoadScene("DeathScene");
         }
+
     }
 
 

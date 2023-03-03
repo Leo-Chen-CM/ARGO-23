@@ -40,12 +40,11 @@ public class BotHandler : MonoBehaviour
     public Unit _unit;
     private ICommand _moveLeft, _moveRight, _jump, _slide; // Our buttons A, D, S, Space so we can link the button to any command at runtime
 
-    // Decays over time which means our bots have limited life cycles
-    [SerializeField]
-    float _differential = .5f;
+    
 
     // 
     [SerializeField] private LayerMask _obstacleMask;
+    [SerializeField] private LayerMask _laneMasks;
     [SerializeField] private float _unitRayDistance = 5f;
     [SerializeField] private float _laneRayDistance;
     Vector3 _direction = Vector3.forward;
@@ -58,6 +57,12 @@ public class BotHandler : MonoBehaviour
     bool _leftactive = false;
     bool _middleActive = false;
     bool _rightActive = false;
+
+    bool head;
+    bool foot;
+    bool _leftRayTriggered;
+    bool _middleRayTriggered;
+    bool _rightRayTriggered;
 
     private void Awake()
     {
@@ -79,12 +84,8 @@ public class BotHandler : MonoBehaviour
     private void Update()
     {
         
-
         // Update our lane so we know what movements are not allowed versus what is acceptable
         UpdateLane();
-
-        // clamp so we dont go negative with our anchor weight
-        _differential = Mathf.Clamp(_differential, 0, .5f);
 
         // Sets up our rays from the player
         HandleRaycasting();
@@ -120,19 +121,15 @@ public class BotHandler : MonoBehaviour
     /// <param name="t_rayDist">the length of the ray</param>
     public void CollisionHandler(float t_rayDist)
     {
-        bool head = Physics.Raycast(_headRay, t_rayDist, _obstacleMask);
-        bool foot = Physics.Raycast(_footRay, t_rayDist, _obstacleMask);
-        
-        // used later when items work
-        //bool left = Physics.Raycast(_leftRay, t_rayDist, _obstacleMask);
-        //bool middle = Physics.Raycast(_middleRay, t_rayDist, _obstacleMask);
-        //bool right = Physics.Raycast(_rightRay, t_rayDist, _obstacleMask);
+        head = Physics.Raycast(_headRay, t_rayDist, _obstacleMask);
+        foot = Physics.Raycast(_footRay, t_rayDist, _obstacleMask);
+        _leftRayTriggered = Physics.Raycast(_leftRay, t_rayDist, _laneMasks);
+        _middleRayTriggered = Physics.Raycast(_middleRay, t_rayDist, _laneMasks);
+        _rightRayTriggered = Physics.Raycast(_rightRay, t_rayDist, _laneMasks);
 
-        if (head && foot)
-        {
-            _ft.Fuzzification(calculateMove());
-        }
-        else if(head)
+        _ft.Fuzzification(_leftRayTriggered, _middleRayTriggered, _rightRayTriggered);
+
+        if(head)
         {
             // jump is possible
             Jump();
@@ -151,83 +148,6 @@ public class BotHandler : MonoBehaviour
     private void Slide()
     {
         _slide.Execute(_unit, _slide);
-    }
-    /// <summary>
-    /// We have an anchor weight of .5 that gets added/subtracted to/from by our differential variable.
-    /// Our differential gets subtracted from over time and by a random chance which will mean that bots get stupider over time.
-    /// We then use our anchor weight to calculate if we should move and which direction to move
-    /// </summary>
-    /// <returns>our anchor weight for fuzzification function</returns>
-    float calculateMove()
-    {
-        float _initial_weight = .5f;
-
-        int _percentileDifferential;
-
-        _percentileDifferential = Random.Range(0, 100);
-
-        UpdateDifferential(_percentileDifferential);
-
-        int _switchLeftRight = Random.Range(0, 10);
-
-        _initial_weight = MoveDirection(_switchLeftRight, _initial_weight);
-
-        return _initial_weight;
-
-    }
-
-    /// <summary>
-    /// For each difficulty we have a different percentage chance to subtract .05f from our differential
-    /// </summary>
-    /// <param name="t_percentageReading">the value generated between 0 and 100</param>
-    void UpdateDifferential(int t_percentageReading)
-    {
-
-        // I hate this and instead want to change the fuzzy sets values to limit the size of the sets rather than just commit seppaku
-        switch (_diff)
-        {
-            case Difficulty.EASY:
-                if (t_percentageReading > 0 && t_percentageReading < 75)
-                {
-                    _differential -= .05f;
-                }
-                break;
-            case Difficulty.MODERATE:
-                if (t_percentageReading > 0 && t_percentageReading < 50)
-                {
-                    _differential -= .05f;
-                }
-                break;
-            case Difficulty.HARD:
-                if (t_percentageReading > 0 && t_percentageReading < 10)
-                {
-                    _differential -= .05f;
-                }
-                break;
-            default:
-                break;
-        }
-    }
-
-    /// <summary>
-    /// When in the middle lane we generate a random number that dictates weighing for moving left/right or 
-    /// if differential is low enough staying in our current lane
-    /// </summary>
-    /// <param name="t_switch">Our random number that effects left/right weighing</param>
-    /// <param name="t_weight">A reference to our current weight</param>
-    /// <returns></returns>
-    float MoveDirection(int t_switch, float t_weight)
-    {
-        if (t_switch <= 5)
-        {
-            t_weight -= _differential;
-        }
-        else if (t_switch > 5 && t_switch <= 10)
-        {
-            t_weight += _differential;
-        }
-
-        return t_weight;
     }
 
     private void UpdateLane()
@@ -268,7 +188,7 @@ public class BotHandler : MonoBehaviour
                 break;
         }
 
-
+        // Sets bools to control lane rays
         switch (_currentLane)
         {
             case Lane.LEFT_LANE:

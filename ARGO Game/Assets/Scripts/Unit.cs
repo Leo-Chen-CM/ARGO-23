@@ -21,23 +21,11 @@ public class Unit : MonoBehaviour
 
     private gameManager gm;
 
-    public GameObject _lava;
-
-    private Vector3 _floorVec;
-
-    readonly float LavaLiveTime = 10.0f;
-
-    bool _hasLavaPowerUp = false;
-
     private void Start()
     {
         gm = FindObjectOfType<gameManager>();
         _rb = GetComponent<Rigidbody>();
         _color = GetComponent<SpriteRenderer>().material.color;
-
-        _floorVec = transform.position;
-        _floorVec.y = _floorVec.y - 1.2f;
-        _floorVec.z = _floorVec.z - 38;
     }
 
     private void Update()
@@ -90,10 +78,6 @@ public class Unit : MonoBehaviour
             }
             Destroy(other.gameObject);
         }
-        else if (other.gameObject.CompareTag("Lava"))
-        {
-            _hasLavaPowerUp = true;
-        }
     }
     private IEnumerator poisonedChecker()
     {
@@ -108,14 +92,6 @@ public class Unit : MonoBehaviour
             poisioned = false;
 
         }
-    }
-
-    public void UseLavaPowerUp()
-    {
-        GameObject newLavaFloor = Instantiate(_lava, _floorVec, Quaternion.identity);
-        _hasLavaPowerUp = false;
-        Destroy(newLavaFloor, LavaLiveTime);
-
     }
 
 }

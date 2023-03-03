@@ -28,10 +28,6 @@ public class InputHandler : NetworkBehaviour
         _unit = GetComponent<Unit>();
 
     }
-    //public override void OnStartServer()
-    //{
-    //    FindObjectOfType<gameManager>().Reset();
-    //}
 
     [Client]
     private void Update()
