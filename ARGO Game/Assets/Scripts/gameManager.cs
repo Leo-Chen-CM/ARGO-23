@@ -85,7 +85,6 @@ public class gameManager : MonoBehaviour
     /// </summary>
     public void increaseHp()
     {
-        m_player.GetComponent<SpriteRenderer>().material.color = m_originalColor;
         if (healthbar != null)
         {
             AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Shield);
