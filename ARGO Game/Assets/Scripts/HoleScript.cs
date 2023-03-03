@@ -35,7 +35,7 @@ public class HoleScript : Obstacle
         }
         transform.position = pos;
     }
-    public override void Interaction()
+    public void Interaction()
     {
         Debug.Log("interacted with obstacle");
     }
