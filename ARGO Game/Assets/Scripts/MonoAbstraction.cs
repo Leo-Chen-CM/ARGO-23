@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonoAbstraction : MonoBehaviour
 {
+    /// allows the commands to access monobehaviour
     public static MonoAbstraction Instance { get; private set; }
     private void Awake()
     {
