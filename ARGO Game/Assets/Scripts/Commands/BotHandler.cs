@@ -3,6 +3,7 @@
  * Worked on by: Jack Sinnott
  */
 
+using log4net.Util;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,24 +33,31 @@ public class BotHandler : MonoBehaviour
     FuzzyTest _ft;
 
     // Enum instantiation
-    Difficulty _diff;
+    public Difficulty _diff;
     public Lane _currentLane;
 
     // Command pattern links
     public Unit _unit;
     private ICommand _moveLeft, _moveRight, _jump, _slide; // Our buttons A, D, S, Space so we can link the button to any command at runtime
-    public static List<ICommand> _oldCommands = new List<ICommand>(); // If we store commands in a list we can backtrack through commands
 
     // Decays over time which means our bots have limited life cycles
     [SerializeField]
     float _differential = .5f;
 
-    // For our ground raycast check
+    // 
     [SerializeField] private LayerMask _obstacleMask;
-    [SerializeField] private float _rayDistance = 2.5f;
+    [SerializeField] private float _unitRayDistance = 5f;
+    [SerializeField] private float _laneRayDistance;
     Vector3 _direction = Vector3.forward;
     Ray _footRay;
     Ray _headRay;
+    Ray _leftRay;
+    Ray _middleRay;
+    Ray _rightRay;
+
+    bool _leftactive = false;
+    bool _middleActive = false;
+    bool _rightActive = false;
 
     private void Awake()
     {
@@ -70,40 +78,19 @@ public class BotHandler : MonoBehaviour
 
     private void Update()
     {
-        // effects our ray distance based on bot difficulty
-        switch (_diff)
-        {
-            case Difficulty.EASY:
-                _rayDistance = 2.5f;
-                break;
-            case Difficulty.MODERATE:
-                _rayDistance = 5f;
-                break;
-            case Difficulty.HARD:
-                _rayDistance = 7.5f;
-                break;
-            default:
-                break;
-        }
+        
 
-        // update our lane info
-        if (transform.position.x < -1f) _currentLane = Lane.LEFT_LANE;
-        else if (transform.position.x > -1f && transform.position.x < 1f) _currentLane = Lane.MIDDLE_LANE;
-        else if (transform.position.x > 1f) _currentLane = Lane.RIGHT_LANE;
+        // Update our lane so we know what movements are not allowed versus what is acceptable
+        UpdateLane();
 
         // clamp so we dont go negative with our anchor weight
         _differential = Mathf.Clamp(_differential, 0, .5f);
 
-        // draw and update ray positions
-        Vector3 pos = transform.position;
-        pos.y *= 2;
-        _headRay = new Ray(pos, transform.TransformDirection(_direction * _rayDistance));
-        pos.y = 0;
-        _footRay = new Ray(pos, transform.TransformDirection(_direction * _rayDistance));
-        Debug.DrawRay(transform.position, transform.TransformDirection(_direction * _rayDistance));
+        // Sets up our rays from the player
+        HandleRaycasting();
 
         // Meat and bones of decision handling
-        CollisionHandler(_rayDistance);
+        CollisionHandler(_unitRayDistance);
 
     }
 
@@ -125,11 +112,6 @@ public class BotHandler : MonoBehaviour
             _moveRight.Execute(_unit, _moveRight);
         }
 
-        // _slide.Execute(_unit, _slide);
-
-
-        //_jump.Execute(_unit, _jump);
-
     }
 
     /// <summary>
@@ -140,6 +122,11 @@ public class BotHandler : MonoBehaviour
     {
         bool head = Physics.Raycast(_headRay, t_rayDist, _obstacleMask);
         bool foot = Physics.Raycast(_footRay, t_rayDist, _obstacleMask);
+        
+        // used later when items work
+        //bool left = Physics.Raycast(_leftRay, t_rayDist, _obstacleMask);
+        //bool middle = Physics.Raycast(_middleRay, t_rayDist, _obstacleMask);
+        //bool right = Physics.Raycast(_rightRay, t_rayDist, _obstacleMask);
 
         if (head && foot)
         {
@@ -148,15 +135,23 @@ public class BotHandler : MonoBehaviour
         else if(head)
         {
             // jump is possible
-            _ft.Fuzzification(calculateMove());
+            Jump();
         }
         else if(foot)
         {
             // duck is posssible
-            _ft.Fuzzification(calculateMove());
+            Slide();
         }
     }
 
+    private void Jump()
+    {
+        _jump.Execute(_unit, _jump);
+    }
+    private void Slide()
+    {
+        _slide.Execute(_unit, _slide);
+    }
     /// <summary>
     /// We have an anchor weight of .5 that gets added/subtracted to/from by our differential variable.
     /// Our differential gets subtracted from over time and by a random chance which will mean that bots get stupider over time.
@@ -187,6 +182,8 @@ public class BotHandler : MonoBehaviour
     /// <param name="t_percentageReading">the value generated between 0 and 100</param>
     void UpdateDifferential(int t_percentageReading)
     {
+
+        // I hate this and instead want to change the fuzzy sets values to limit the size of the sets rather than just commit seppaku
         switch (_diff)
         {
             case Difficulty.EASY:
@@ -231,5 +228,84 @@ public class BotHandler : MonoBehaviour
         }
 
         return t_weight;
+    }
+
+    private void UpdateLane()
+    {
+        // update our lane info
+        if (transform.position.x < -1f) _currentLane = Lane.LEFT_LANE;
+        else if (transform.position.x > -1f && transform.position.x < 1f) _currentLane = Lane.MIDDLE_LANE;
+        else if (transform.position.x > 1f) _currentLane = Lane.RIGHT_LANE;
+    }
+
+    private void HandleRaycasting()
+    {
+        // draw and update ray positions
+        Vector3 pos = transform.position;
+        pos.y *= 2;
+        _headRay = new Ray(pos, transform.TransformDirection(_direction * _unitRayDistance));
+
+        Debug.DrawRay(pos, transform.TransformDirection(_direction * _unitRayDistance));
+
+        pos.y = 0;
+        _footRay = new Ray(pos, transform.TransformDirection(_direction * _unitRayDistance));
+
+        Debug.DrawRay(pos, transform.TransformDirection(_direction * _unitRayDistance));
+
+        // effects our ray distance based on bot difficulty
+        switch (_diff)
+        {
+            case Difficulty.EASY:
+                _laneRayDistance = 7.5f;
+                break;
+            case Difficulty.MODERATE:
+                _laneRayDistance = 12.5f;
+                break;
+            case Difficulty.HARD:
+                _laneRayDistance = 15f;
+                break;
+            default:
+                break;
+        }
+
+
+        switch (_currentLane)
+        {
+            case Lane.LEFT_LANE:
+                _leftactive = false;
+                _middleActive = true;
+                _rightActive = true;
+                break;
+            case Lane.MIDDLE_LANE:
+                _leftactive = true;
+                _middleActive = false;
+                _rightActive = true;
+                break;
+            case Lane.RIGHT_LANE:
+                _leftactive = true;
+                _middleActive = true;
+                _rightActive = false;
+                break;
+            default:
+                break;
+        }
+
+        
+
+        if (_leftactive)
+        {
+            _leftRay = new Ray(new Vector3(-3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
+            Debug.DrawRay(new Vector3(-3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
+        }
+        if(_middleActive)
+        {
+            _middleRay = new Ray(new Vector3(0, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
+            Debug.DrawRay(new Vector3(3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
+        }
+        if(_rightActive)
+        {
+            _rightRay = new Ray(new Vector3(3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
+            Debug.DrawRay(new Vector3(3.5f, 0, 0), transform.TransformDirection(_direction * _laneRayDistance));
+        }
     }
 }
