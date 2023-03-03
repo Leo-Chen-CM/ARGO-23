@@ -33,6 +33,7 @@ public class Unit : MonoBehaviour
     {
         gm = FindObjectOfType<gameManager>();
         _rb = GetComponent<Rigidbody>();
+        poisioned= false;
         _color = GetComponent<SpriteRenderer>().material.color;
     }
 
@@ -84,6 +85,7 @@ public class Unit : MonoBehaviour
         if (other.tag == "Pickup")
         {
             gm.addScore();
+            AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Coin);
             Destroy(other.gameObject);
         }
         else if (other.tag == "Obstacle")
@@ -96,13 +98,14 @@ public class Unit : MonoBehaviour
         }
     }
     private IEnumerator poisonedChecker()
-    {
-           _color.g += 0.005f;
-           gameObject.GetComponent<SpriteRenderer>().material.color = _color;
-           
-           yield return new WaitForSeconds(waitTime);
-            _color.g = 0;
-            poisioned = false;
+    {    
+        AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Poison);
+        _color.g += 0.005f;
+        gameObject.GetComponent<SpriteRenderer>().material.color = _color;
+        
+        yield return new WaitForSeconds(waitTime);
+        _color.g = 0;
+        poisioned = false;
     }
 
 

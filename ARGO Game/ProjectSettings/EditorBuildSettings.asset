@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: b0c36dcb1f721e148b4eea3a43d62207
+  - enabled: 1
+    path: Assets/Scenes/BlankOffline.unity
+    guid: a7c8bcbcbf30f5d44ad3b44a3d1c33fb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0b6ddb2e84efa5049826ce21fcb2da8e,
       type: 2}

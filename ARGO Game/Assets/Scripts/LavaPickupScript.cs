@@ -45,7 +45,7 @@ public class LavaPickupScript : Obstacle
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
+            AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Injured);
             GameObject newLavaFloor = Instantiate(lavaFloor, floorVec, Quaternion.identity);
             Destroy(newLavaFloor, LavaLiveTime);
            

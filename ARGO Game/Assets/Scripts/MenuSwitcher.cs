@@ -9,6 +9,14 @@ using Mirror.Examples.MultipleMatch;
 public class MenuSwitcher : MonoBehaviour
 {
     /// <summary>
+    /// Starts in game music
+    /// </summary>
+    private void Start()
+    {
+        AudioManager.Instance().PlayMusic(AudioManager.Music.Game);
+    }
+
+    /// <summary>
     /// Loads the Multiplayer Menu screen
     /// </summary>
     public void LoadMultiplayerMenu()
