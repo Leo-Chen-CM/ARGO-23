@@ -127,9 +127,11 @@ public class BotHandler : MonoBehaviour
         _middleRayTriggered = Physics.Raycast(_middleRay, t_rayDist, _laneMasks);
         _rightRayTriggered = Physics.Raycast(_rightRay, t_rayDist, _laneMasks);
 
-        _ft.Fuzzification(_leftRayTriggered, _middleRayTriggered, _rightRayTriggered);
-
-        if(head)
+        if (head && foot)
+        {
+            _ft.Fuzzification(_leftRayTriggered, _middleRayTriggered, _rightRayTriggered);
+        }
+        else if(head)
         {
             // jump is possible
             Jump();
@@ -176,13 +178,13 @@ public class BotHandler : MonoBehaviour
         switch (_diff)
         {
             case Difficulty.EASY:
-                _laneRayDistance = 10f;
+                _laneRayDistance = 5f;
                 break;
             case Difficulty.MODERATE:
-                _laneRayDistance = 20f;
+                _laneRayDistance = 7.5f;
                 break;
             case Difficulty.HARD:
-                _laneRayDistance = 30f;
+                _laneRayDistance = 10f;
                 break;
             default:
                 break;
