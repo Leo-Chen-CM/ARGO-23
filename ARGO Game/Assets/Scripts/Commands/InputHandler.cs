@@ -15,7 +15,7 @@ public class InputHandler : NetworkBehaviour
     private bool _fingerDown;
     public bool _offline;
 
-    [SerializeField] private bool onPC = true;
+    [SerializeField] private bool onPC = false;
 
     private void Awake()
     {
@@ -28,10 +28,7 @@ public class InputHandler : NetworkBehaviour
         _unit = GetComponent<Unit>();
 
     }
-    //public override void OnStartServer()
-    //{
-    //    FindObjectOfType<gameManager>().Reset();
-    //}
+
 
     [Client]
     private void Update()

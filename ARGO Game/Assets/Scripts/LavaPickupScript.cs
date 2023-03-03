@@ -12,8 +12,8 @@ public class LavaPickupScript : Obstacle
     /// reference to the game manager
     public GameObject gm;
     Vector3 floorVec;
-   
-    
+
+
     private void Start()
     {
         floorVec = transform.position;
@@ -48,7 +48,7 @@ public class LavaPickupScript : Obstacle
             AudioManager.Instance().PlaySoundEffect(AudioManager.SoundEffect.Injured);
             GameObject newLavaFloor = Instantiate(lavaFloor, floorVec, Quaternion.identity);
             Destroy(newLavaFloor, LavaLiveTime);
-           
+
         }
     }
 }

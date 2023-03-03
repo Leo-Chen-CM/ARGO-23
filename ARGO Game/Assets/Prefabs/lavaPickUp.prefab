@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6002732755035616431}
   m_Layer: 8
   m_Name: lavaPickUp
-  m_TagString: Obstacle
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  spawner: {fileID: 2460286750823966618, guid: 71d8e1bf4a7c7bd468a0770dec2beff4, type: 3}
   lavaFloor: {fileID: 4777029037519589819, guid: 060682e40436c0b4c803b3bcf7ceb2b2,
     type: 3}
   gm: {fileID: 7804843690267304042, guid: a45936f2bc3dfc94fbbac1c1046ca11c, type: 3}
