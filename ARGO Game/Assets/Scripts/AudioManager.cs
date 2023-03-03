@@ -23,6 +23,14 @@ public class AudioManager : MonoBehaviour
     public enum SoundEffect
     {
         //effect name
+        Coin,
+        Spider,
+        Shield,
+        ShieldBlock,
+        Rat,
+        Poison,
+        Injured,
+
     }
 
 
@@ -126,12 +134,17 @@ public class AudioManager : MonoBehaviour
     {
         // Music
         int count = System.Enum.GetValues(typeof(Music)).Length;
-        _music.Add(Music.Game, GetAudioContent("Audio/loop"));
+        _music.Add(Music.Game, GetAudioContent("Audio/Underground Caves"));
 
         // UI Sound Effects
         count = System.Enum.GetValues(typeof(SoundEffect)).Length;
-        //_SoundEffects.Add(SoundEffect.Bite, GetAudioContent("Audio/bite"));
-        //_SoundEffects.Add(SoundEffect.Spawning, GetAllAudioContent("Audio/Spawning"));
+        _SoundEffects.Add(SoundEffect.Coin, GetAudioContent("Audio/Coin"));
+        _SoundEffects.Add(SoundEffect.Shield, GetAudioContent("Audio/Shield"));
+        _SoundEffects.Add(SoundEffect.ShieldBlock, GetAudioContent("Audio/Shield Block"));
+        _SoundEffects.Add(SoundEffect.Poison, GetAudioContent("Audio/Poison Gas"));
+        _SoundEffects.Add(SoundEffect.Rat, GetAudioContent("Audio/Rat"));
+        _SoundEffects.Add(SoundEffect.Injured, GetAudioContent("Audio/Injured"));
+        _SoundEffects.Add(SoundEffect.Spider, GetAllAudioContent("Audio/Spider"));
     }
 
     private AudioClip[] GetAllAudioContent(string path)
