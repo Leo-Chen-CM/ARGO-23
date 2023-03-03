@@ -15,7 +15,7 @@ public class Unit : MonoBehaviour
     Vector3 _direction = Vector3.down;
     Ray _ray;
     Color _color;
-    public float _jumpForce = 5;
+    public float _jumpForce = 20;
     private float waitTime = 1.5f;
     public Rigidbody _rb;
 
